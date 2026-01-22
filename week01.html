@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=277;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week01.html","20240116064739","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387659");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>DBS311 - Week 1 - Review of Database Design and SQL </title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064739/http%3A//dbs211.ca/courses/dbs710/Week01.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week01.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064739"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;">
+                    <a class="t" href="https://web.archive.org/web/20240116064739*/http://dbs211.ca/courses/dbs710/Week01.html" title="See a list of every capture for this URL">3 captures</a>
+          <div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 08 Jul 2025</div>
+          </div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px;"></div><div class="mt" style="display: none; width: 2px; height: 27px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap">Dec</td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:39 Jan 16, 2024">JAN</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><span class="ta"></span></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:39 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:39 Jan 16, 2024">2024</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064739/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week01.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html#" data-url="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html#" data-url="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./DBS311 - Week 1 - Review of Database Design and SQL_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./DBS311 - Week 1 - Review of Database Design and SQL_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs710/Week01.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week01.html","20240116064739",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./DBS311 - Week 1 - Review of Database Design and SQL_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./DBS311 - Week 1 - Review of Database Design and SQL_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./DBS311 - Week 1 - Review of Database Design and SQL_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./DBS311 - Week 1 - Review of Database Design and SQL_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./DBS311 - Week 1 - Review of Database Design and SQL_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+<h1>
+    1 - Review of SQL from DBS610</h1>
+
+        <h2>Optional Addition Suggested Reading Materials</h2>
+        <ul>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064739/http://dbs211.ca/courses/dbs610">Review of DBS610 website</a></li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064739/https://opentextbc.ca/dbdesign01/">Textbook - DatabaseDesign</a>
+                </li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064739/https://www.w3schools.com/sql/">W3Schools SQL Tutorials</a>
+                </li>
+        </ul>
+        <hr>
+        <h2 id="Week1">
+            Welcome to Week 1</h2>
+        <p>
+            Welcome to week 1 of 710, Advanced Database Systems.&nbsp; In this course students will be introduced to data management concepts, database systems and database application programming using Microsoft SQL Server.&nbsp; Students expand upon their SQL knowledge from DBS610 by learning more about transactions, aggregation, set operators, sub-queries, sequences, and autonumbering.  Furthermore, students dive into the realm of Procedural SQL learning about Anonymous Blocks, User-Defined Functions, Stored Procedures, and Triggers. Lastly the students learn about NoSQL Databases by using MongoDB to practice basic concepts of data manipulation through NoSQL.</p>
+        <p>
+            Week 1 acts as a review of concepts learned in DBS610 in addition expanding upon this knowledge of key concepts used through the next few weeks of the course.  After this week you should be able to:</p>
+        <ul>
+            <li>Recall the difference between DML and DDL</li>
+            <li>Write basic SQL statements including sorting and filtering</li>
+            <li>Understand and explain the concepts of relationships and referential integrity</li>
+            <li>Write DDL statements for CREATE and ALTER TABLE including attribute definition and constraint implementation</li>
+            <li>Write multi-table SELECT statements using the ansi-92 JOIN syntax for INNER, OUTER and FULL joins.</li>
+            <li>Create views</li>
+            <li>Control basic user access to the database using GRANT and REVOKE functions</li>
+            <li>recall the basics of transaction and how SQL Developer is used to control them</li>
+            <li>understand the importance of case sensitivity when dealing with user input data</li>
+            <li>be able to handle dates in an international environment</li>
+        </ul>
+        <hr>
+        <h2 id="SQL">SQL and SQL Standardization</h2>
+        <p>What is SQL?
+SQL stands for Structured Query Language
+SQL lets you access and manipulate databases.</p>
+        <p>&nbsp;SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987
+</p>
+        <p>What Can SQL do?&nbsp;&nbsp; SQL can:</p>
+        <ul>
+            <li>execute queries against a database </li>
+            <li>retrieve data from a database </li>
+            <li>insert records in a database </li>
+            <li>update records in a database </li>
+            <li>delete records from a database
+</li>
+            <li>create new databases
+</li>
+            <li>create new tables in a database
+</li>
+            <li>create stored procedures in a database
+</li>
+            <li>create views in a database
+</li>
+            <li>set permissions on tables, procedures, and views
+</li>
+        </ul>
+        <p>
+                        SQL is a Standard - BUT....
+Although SQL is an ANSI/ISO standard, there are different versions of the SQL language.
+
+However, they all DBMSs support at least the major commands (such as SELECT, UPDATE, DELETE, INSERT, CREATE) in a similar manner.&nbsp; It should also be noted that most of the DBMSs also have their own proprietary extensions in addition to the SQL standard!&nbsp; This course uses Oracle as it's DBMS, but will try to remain agnostic with respect to the teaching and learning of the SQL language to maximize the learner's ability to apply their learned knowledge to a different DBMS in the future.</p>
+        <h2 id="Languages">Sub-Languages of SQL</h2>
+			<p>There are several sub-categories of SQL that play specific roles in the querying and manipulation of databases.</p>
+        <table>
+            <tbody><tr>
+                <td>DML</td>
+                <td>Data Manipulation Language</td>
+                <td>This set of SQL statements are used to query or change the data stored in the database.&nbsp; DML common statements include <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>.&nbsp; These commands generally only impact rows of data in existing tables.&nbsp; These commands are about "What" data is stored in the database.</td>
+            </tr>
+            <tr>
+                <td>DDL</td>
+                <td>Data Definition Language</td>
+                <td>This set of SQL statements are used to create or modify the structure of the database.&nbsp; "How" is data stored in the database?&nbsp; These commands generally only impact tables and columns and other stored objects in the database.&nbsp; The main statements included in DDL are <code>CREATE</code>, <code>CREATE OR REPLACE</code>, and <code>ALTER</code>.</td>
+            </tr>
+            <tr>
+                <td>TCL</td>
+                <td>Transaction Control Language</td>
+                <td>TCL is a subset of statements that assist in controlling one or more SQL DML statements that need to either completely succeed or entirely fail.&nbsp; A transaction must be complete or not happen at all.&nbsp; Common commands include <code>BEGIN</code>, <code>COMMIT</code>, <code>SAVEPOINT</code> and <code>ROLLBACK</code></td>
+            </tr>
+            <tr>
+                <td>PL/SQL</td>
+                <td>Procedural Language extensions to SQL</td>
+                <td>PL/SQL is an Oracle specific advanced compiled procedural language extension to SQL that allows for complex processes to be performed on data or databases.&nbsp; PL/SQL contains many of the operations that we would find in most programming languages, such as loops, functions, variables, conditional statements, etc.&nbsp; This topic is not covered until DBS501 or DBS511.</td>
+            </tr>
+        </tbody></table>
+        <hr>
+        <h1>DML Basics Review</h1>
+        <h2>Basic SELECT coding</h2>
+        <p>Recall the basic syntax of the SELECT statement.</p>
+        <div class="GeneralSQL"></div>
+        <pre>            SELECT &lt;comma separated fields list&gt; 
+            FROM &lt;table name&gt;
+            WHERE &lt;filter condition(s)&gt;
+            ORDER BY &lt;comma separated fields list&gt; 
+        </pre>
+        <h3>The "*" symbology</h3>
+        <p>Recall the use of the special character "*" that indicates that the statement should return all columns in the table, in the order they were created.  Note that the asterisk symbol makes no suggestion to which rows to return and specifically does NOT state that all rows should be returned: that is reserved for the WHERE clause.</p>
+        <div class="GeneralSQL"></div>
+        <pre>            SELECT * 
+            FROM &lt;table name&gt;
+            WHERE &lt;filter condition(s)&gt;
+            ORDER BY &lt;comma separated fields list&gt; 
+        </pre>
+        <p class="BestPractice">The asterisk is a symbol that is not typically used very often in finished database systems.  This type of statement is typically only reserved for investigating the data and reviewing the table structure.  It is best practice to specify the specific columns required, in the order they are required.  Therefore, your output remains predictable for associated software, regardless of future addition of new fields, for example.</p>
+        <h3>Use of Quotes in SQL</h3>
+        <p>In SQL there are both single quotes ( ' ) and double quotes ( " ).  Unlike other languages, such as JavaScript, the two different quote types actually define different things.</p>
+        <ul>
+            <li>' - single quotes are used solely to include string elements in SQL statements</li>
+            <li>" - double quotes are used to define object names.  Content within double quotes are used to name aliases, columns, and other objects in a database or an SQL statement.</li>
+        </ul>
+        <div class="GeneralSQL"></div>
+        <pre>            SELECT
+                first_name AS "FirstName",
+                last_name AS "LastName"
+            FROM employees
+            WHERE first_name = 'John';
+        </pre>
+        <p>note: the double quotes are optional for field aliases if the alias name is in the singular format (i.e single word of multiple words with no spaces).</p>
+        <p class="BestPractice">In MS SQL only, double quotes are often replaced by using square brackets, but this is specific only to MS SQL, so it is best practice to use double quotes which is more universally accepted.</p>
+        <div class="MSSQL"></div>
+        <pre>            SELECT
+                [first_name] AS [FirstName],
+                [last_name] AS [LastName]
+            FROM [employees]
+            WHERE [first_name] = 'John';
+            -- square brackets should be avoided to write more universally generic SQL
+        </pre>
+
+        <h3>DISTINCT keyword</h3>
+        <p>Often it is required to get a list of values from a column or row where repeating values are not required.  The <code>distinct</code> keyword can be used to ensure that rows returned in a statement contain distinct values.</p>
+        <div class="GeneralSQL"></div>
+        <pre>            SELECT DISTINCT city
+            FROM customers
+            ORDER BY city;
+        </pre>
+        <p>returns a list of cities from which customers live without repeating cities from which multiple customers are found.</p>
+
+        <h2>Order of Execution</h2>
+        <p>There is an order to the execution of the statement that must be understood, as it has consequences to how the statement can be used and as statements get much more complex, it is important to understand how they are executed.</p>
+        <p>For the four basic parts of the statement learned in the previous course, the order of execution is:</p>
+        <ol>
+            <li>FROM</li>
+            <li>WHERE</li>
+            <li>SELECT</li>
+            <li>ORDER BY</li>
+        </ol>
+        <p>
+            In English, we might say "FROM this source, WHERE something is true, SELECT these fields and calculations, and ORDER BY the output by these fields."</p>
+        <blockquote>We will refer back to the Order of Execution many times through this course when the lesson is impacted by the order of execution.</blockquote>
+        <p>The last point to consider it that the SELECT statement executes as a loop for each row of data in the source data.</p>
+
+        <h2>Order of Precedence</h2>
+        <p>When preforming operations within SQL, especially in calculations, the traditional order of operations from mathematics, knows as BEDMAS, still applies.  However, SQL includes addition operators and components that mean that the order of operations need to be expanded.  This is called the Order of Precedence.</p>
+        <p>When a complex expression has multiple operators, operator precedence determines the sequence of operations.  The order of execution can significantly affect the resulting value.</p>
+        <p>The following table provides a list of operators and the order in which they are processed.</p>
+        
+        <ul>
+            <li>~ (Bitwise NOT)</li>
+            <li>* (Multiplication), / (Division), % (Modulus)</li>
+            <li>+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction), &amp; (Bitwise AND), ^ (Bitwise Exclusive OR), | (Bitwise OR)</li>
+            <li>=, &gt;, &lt;, &gt;=, &lt;=, &lt;&gt;, !=, !&gt;, !&lt; (Comparison operators)</li>
+            <li>NOT</li>
+            <li>AND</li>
+            <li>ALL, ANY, BETWEEN, IN, LIKE, OR, SOME</li>
+            <li>= (Assignment)</li>
+        </ul>
+        <p>When two operators are present that have the same order of precedence, they are evaluated in the order they occur, generally left to right.</p>
+
+        <h2>Write enabled CRUD statements</h2>
+        <p>A reminder that the term CRUD, refers to the 4 main DML statements.</p>
+        <ul>
+            <li>C - Create - refers to the creation of data and the <code>INSERT</code> statement</li>
+            <li>R - Read - refers to the extraction of data from the database using the <code>SELECT</code> statement</li>
+            <li>U - Update - refers to the updating of already existing data using the <code>UPDATE</code> statement</li>
+            <li>D - Delete - refers to the deletion of existing data using the <code>DELETE</code> statement</li>
+        </ul>
+        <p>So far we have covered the very basics of the SELECT statement, so let us review the other 3 statements.</p>
+
+        <h2>Standard INSERT Form</h2>
+        <p>The standard <code>INSERT</code> statement is formed as:</p>
+        <div class="GeneralSQL"></div>
+<pre>INSERT INTO &lt;tablename&gt; ( <span class="substitute">&lt;fieldlist comma separated&gt;</span> )
+    VALUES ( <span class="substitute">&lt;Value list comma separated&gt;</span> );
+
+<span class="comment">-- example</span>
+INSERT INTO offices (officecode, phone, city, addressline1, state, country, postalcode, territory)
+    VALUES (8, '+1 905 555 1212', 'Toronto', '200 Young St. N., 'ON', 'Canada', 'M4A3A1', 'NA);
+</pre>
+        <p>Notes:</p>
+        <ul>
+            <li>only those fields that are required (not null) need to be present</li>
+            <li>the field list can be in any order</li>
+            <li>the number of values must match the number of fields</li>
+            <li>the values must be in the same order as the fields they match.</li>
+            <li>single quotes are used to indicate string values</li>
+            <li>the <code>TO_DATE()</code> function should alwasy be used if hard coded dates are being entered.</li>
+        </ul>
+        <h3>Short-Cut INSERT Statement</h3>
+        <p>The short-cut form of the INSERT statement is:</p>
+        <div class="GeneralSQL"></div><pre>INSERT INTO &lt;tablename&gt; ( <span class="substitute">&lt;Value list comma separated&gt;</span> );
+
+<span class="comment">-- example</span>
+INSERT INTO offices VALUES (8, 'Toronto', '+1 905 555 1212', '200 Young St. N., NULL, 'ON', 'Canada', 'M4A3A1', 'NA);
+</pre>
+
+        <p>Notes:</p>
+        <ul>
+            <li>ALL fields values must be included, regardless if they are NULL or not.</li>
+            <li>the values MUST be in the same order as the table was created</li>
+            <li>the number of values must match the number of fields, even if the Primary Key is an autonumbering sequence</li>
+            <li>use the value NULL for fields that are not required and a value is not available</li>
+        </ul>
+
+        <h3>Inserting Multiple Rows in One Statement</h3>
+        <p>It is possible to insert more than one row manually in a single statement.&nbsp; It is important to note that this statement has a variety of forms in different DBMSs.</p>
+
+<div class="MSSQL"></div>
+<pre>INSERT INTO &lt;tablename&gt; VALUES 
+    ( <span class="substitute">&lt;value list comma separated &gt;</span>),
+    ( <span class="substitute">&lt;value list comma separated &gt;</span>),
+    ( <span class="substitute">&lt;value list comma separated &gt;</span>);
+<span class="comment">-- a maximum of 1000 rows per statement
+-- Example:</span>
+INSERT INTO offices VALUES 
+    (8, 'Toronto', '+1 416 555 1111', '200 Young St. N., NULL, 'ON', 'Canada', 'M4A3A1', 'NA),
+    (9, 'Oshawa', '+1 905 555 2222', '155 Simcoe. S., NULL, 'ON', 'Canada', 'N2L3G4', 'NA),
+    (10, 'Montreal', '+1 268 555 3333', '1245 Rue Lavac, NULL, 'QC', 'Canada', 'K3S2H4', 'NA);
+</pre>
+        <h3>Inserting Multiple Rows From another Table</h3>
+        <p>
+            It is possible to insert data into a table using data from another table.&nbsp; Use this feature with caution as it absolutely will be creating redundant and repetitive data if used incorrectly.&nbsp; This is typically only used when creating tables through migration of an old database to a new database or importing data into live tables from temporary tables.</p>
+<pre>INSERT INTO <span class="subtitute">&lt;tablename&gt;</span> (<span class="substitute">&lt;fieldlist&gt;</span>) 
+    SELECT <span class="substitute">&lt;fieldlist&gt; </span>
+    FROM <span class="substitute">&lt;tablename&gt;</span>
+    WHERE <span class="substitute">&lt;condition&gt;</span>         <span class="comment">-- optional</span>
+    ORDER BY <span class="substitute">&lt;fieldlist&gt;</span>;     <span class="comment">-- optional</span>
+</pre>
+        <p>
+            Notes:</p>
+        <ul>
+            <li>the fieldlist in the SELECT must match the fieldlist in the INSERT (not same names, but smae meaning)</li>
+            <li>the order of the two fieldlists (SELECT and INSERT) must be the same</li>
+            <li>you can choose not to include the fieldlist in the INSERT line, but then must have all fields in the right order in the SELECT line</li>
+            <li>The WHERE clause is optional</li>
+            <li>The ORDER BY is also optional and not typically needed unless there are autonumbering sequences involved</li>
+        </ul>
+        <h2 id="update">UPDATE - Updating Existing Data</h2>
+			<p>Updating an existing row or rows is possible through the <code>UPDATE</code> statement.  The basic form of <code>UPDATE</code> is:</p>
+            
+<pre>UPDATE <span class="substitute">&lt;tablename&gt;</span> 
+    SET <span class="substitute">&lt;field&gt;</span> = <span class="substitute">&lt;value&gt;</span>,
+        <span class="substitute">&lt;field&gt;</span> = <span class="substitute">&lt;value&gt;</span>,
+        <span class="substitute">&lt;field&gt;</span> = <span class="substitute">&lt;value&gt;</span>,
+WHERE <span class="substitute">&lt;condition&gt;</span>;   <span class="comment">-- optional</span>,
+</pre>
+<p class="BestPractice">It is almost ALWAYS necessary to include a WHERE clause to ensure only the rows that are to be updated are updated and no other rows accidentally.  If a single row is to be updated, it is best practice to always use the primary key in the <code>WHERE</code> clause</p>
+        <p>The update statement can update a single field, multiple fields base on the SET part and can update several rows at the same time based on the WHERE part.  The optional WHERE part is used in most cases as it is important to very cleary indicate which rows are to be updated. For intance:</p>
+<pre><span class="highlight">UPDATE employees SET lastname = 'Smith'</span>;   <span class="comment">-- BAD, updates ALL employees</span>
+</pre>
+        <p>would update every employee in the companies lastname to 'Smith' rather than the one woman who got married on the weekend.  OOPS!</p>
+        <pre>UPDATE employees SET lastname = 'Smith'
+<span class="highlight">WHERE lastname = 'Jones'</span>;   <span class="comment">-- BAD, updates all people with last name Jones to Smith</span>
+</pre>
+        <p>If the woman is changing her name from Jones to Smith, this statement may seem reasonable, but there is no guarantee that there is not more than one employee with the last name Jones.  This statement would change all the Jone's to Smith's.  OOPS!</p>
+        <blockquote>Using the PRIMARY KEY is the best way to clearly indicate the exact row that needs to be updated as by definition it is unique.</blockquote>
+        <pre>UPDATE employees SET lastname = 'Smith'
+WHERE employeeId = 343;   <span class="comment">-- BEST, Primary Key is unique</span>
+</pre>
+        <h2 id="delete">DELETE - Deleting Existing Data</h2>
+			<p>Although the most dangerous of the CRUD statements, the DELETE statement is also the simplist.&nbsp; The basic form of the DELETE statement is:</p>
+<pre>DELETE FROM <span class="substitute">&lt;tablename&gt;</span>
+WHERE <span class="substitute">&lt;condition&gt;</span> <span class="comment">-- optional </span></pre>
+<p class="BestPractice">It is almost ALWAYS necessary to include a WHERE clause to ensure only the rows that are to be deleted are removed and no other rows accidentally.  If a single row is to be deleted, it is best practice to always use the primary key in the <code>WHERE</code> clause</p>
+        <p>There is no fieldlist or complexities in the delete statement.  It's intention is to delete entire ros and all values in the row(s).  If a WHERE clause is not included, this statement will delete all rows from the table indicated; potential disaster.&nbsp; Therefore, it is highly recommend that in most cases, the WHERE clause is indicated and uses a clear indicator field, such as the Primary Key.</p>
+        
+        <h2>Joins</h2>
+        <p>As a review of join we must recall that joins are the process in which we are able to connect multiple tables together in order to retrieve data from those tables, or perform calculations or comparisons on data from multiple tables.</p>
+        <h3>Types of Joins</h3>
+        <p>There are many kinds of joins in SQL, however, we will cover the 4 most popular here and leave the more advanced joins for a later course.  The 4 types we will review here are all inner or outer joins.</p>
+        <p>Let us use the following tables to understand basic joins.</p>
+<table><caption>SPORTS TEAMS TABLES</caption>
+    <thead>
+        <tr>
+            <td colspan="4">PLAYERS</td>
+            <td rowspan="5">&nbsp;</td>
+            <td colspan="4">TEAMS</td>
+        </tr>
+        <tr><td class="text-underline">PlayerID</td>
+    <td>firstname</td>
+    <td>lastname</td>
+    <td>teamid</td>
+    <td class="text-underline">teamID</td>
+            <td>teamName</td>
+            <td>shirtColor</td>
+            <td>homeField</td>
+</tr>
+</thead>
+    <tbody><tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Smith</td>
+        <td>10</td>
+        <td rowspan="4">&nbsp;</td>
+        <td>10</td>
+        <td>Hornets</td>
+        <td>Yellow</td>
+        <td>Toronto</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Bob</td>
+        <td>Marley</td>
+        <td>10</td>
+        <td>11&nbsp;</td>
+        <td>Falcons</td>
+        <td>Brown</td>
+        <td>Barrie</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Steven</td>
+        <td>King</td>
+        <td>11</td>
+        <td>12</td>
+        <td>Bloopers</td>
+        <td>Red</td>
+        <td>Kitchener</td>
+    </tr>
+
+
+    <tr>
+        <td>4</td>
+        <td>Jim</td>
+        <td>Parsons</td>
+        <td>NULL</td>
+        <td>13</td>
+        <td>Kings</td>
+        <td>Purple</td>
+        <td>Oshawa</td>
+    </tr>
+
+
+</tbody></table>
+<p>Using the above tables, we will investigate some JOINS but code example</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Join Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Results</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inner</td>
+                    <td>Will return all rows where the equality, teamID in this case, in both tables EXACTLY match</td>
+                    <td><pre>SELECT firstname, lastname, teamName
+FROM players <span class="highlight">INNER JOIN</span> teams 
+    USING (teamID)
+ORDER BY teamName, lastname;</pre></td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>FirstName</td>
+                                    <td>LastName</td>
+                                    <td>TeamName</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smith</td>
+                                    <td>Hornets</td>
+                                </tr>
+                                <tr>
+                                    <td>Bob</td>
+                                    <td>Marley</td>
+                                    <td>Hornets</td>
+                                </tr>
+                                <tr>
+                                    <td>Steven</td>
+                                    <td>King</td>
+                                    <td>Falcons</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Left Outer</td>
+                    <td>Will return all rows of the INNER join, but will ensure all rows from the table on the left of the word JOIN, players in this case, are included regardless of the equality.</td>
+                    <td><pre>SELECT firstname, lastname, teamName
+FROM players <span class="highlight">LEFT OUTER JOIN</span> teams
+    USING (teamID)
+ORDER BY teamName, lastname;</pre></td>
+                    <td><table>
+                        <thead>
+                            <tr>
+                                <td>FirstName</td>
+                                <td>LastName</td>
+                                <td>TeamName</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>Hornets</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>Marley</td>
+                                <td>Hornets</td>
+                            </tr>
+                            <tr>
+                                <td>Steven</td>
+                                <td>King</td>
+                                <td>Falcons</td>
+                            </tr>
+                            <tr style="color: red;">
+                                <td>Jim</td>
+                                <td>Parsons</td>
+                                <td><i>NULL</i></td>
+                            </tr>
+                        </tbody>
+                    </table></td>
+                </tr>
+                <tr>
+                    <td>Right Outer</td>
+                    <td>Will return all rows of the INNER join, but will ensure all rows from the table on the right of the word JOIN, teams in this case, are included regardless of the equality.</td>
+                    <td><pre>SELECT firstname, lastname, teamName
+FROM players <span class="highlight">RIGHT OUTER JOIN</span> teams
+    USING (teamID)
+ORDER BY teamName, lastname;</pre></td>
+                    <td><table>
+                        <thead>
+                            <tr>
+                                <td>FirstName</td>
+                                <td>LastName</td>
+                                <td>TeamName</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>Hornets</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>Marley</td>
+                                <td>Hornets</td>
+                            </tr>
+                            <tr>
+                                <td>Steven</td>
+                                <td>King</td>
+                                <td>Falcons</td>
+                            </tr>
+                            <tr style="color: red;">
+                                <td><i>NULL</i></td>
+                                <td><i>NULL</i></td>
+                                <td>Bloopers</td>
+                            </tr>
+                            <tr style="color: red;">
+                                <td><i>NULL</i></td>
+                                <td><i>NULL</i></td>
+                                <td>Kings</td>
+                            </tr>
+                        </tbody>
+                    </table></td>
+                </tr>
+                <tr>
+                    <td>Full Outer</td>
+                    <td>Will return all rows of the INNER join, but will ensure all rows from both tables are included regardless of the equality.</td>
+                    <td><pre>SELECT firstname, lastname, teamName
+FROM players <span class="highlight">FULL OUTER JOIN</span> teams
+    USING (teamID)
+ORDER BY teamName, lastname;</pre></td>
+                    <td><table>
+                        <thead>
+                            <tr>
+                                <td>FirstName</td>
+                                <td>LastName</td>
+                                <td>TeamName</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>Hornets</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>Marley</td>
+                                <td>Hornets</td>
+                            </tr>
+                            <tr>
+                                <td>Steven</td>
+                                <td>King</td>
+                                <td>Falcons</td>
+                            </tr>
+                            <tr style="color: red;">
+                                <td>Jim</td>
+                                <td>Parsons</td>
+                                <td><i>NULL</i></td>
+                            </tr>
+                            <tr style="color: red;">
+                                <td><i>NULL</i></td>
+                                <td><i>NULL</i></td>
+                                <td>Bloopers</td>
+                            </tr>
+                            <tr style="color: red;">
+                                <td><i>NULL</i></td>
+                                <td><i>NULL</i></td>
+                                <td>Kings</td>
+                            </tr>
+                        </tbody>
+                    </table></td>
+                </tr>
+            </tbody>
+        </table>
+<h2>Single Line Functions</h2>
+        <h3>CONVERT()</h3>
+        <p>The convert function allows you to convert data between types.  This is often used with manual date entry as well as with string concatenation in parameters.  You can use the <code>CONVERT</code> function to explicitly cast as expression from one data type to another data type.  You can also use the optional style parameter to choose a specific format for the returned value.</p>
+        <h4>Syntax of CONVERT</h4>
+        <pre>CONVERT(data type, expression [,style])</pre>
+        <p>An example SELECT statement using the CONVERT function</p>
+        <pre>SELECT 
+    CONVERT(varchar, hireDate) AS DateString,
+    CONVERT(varchar, hireDate, 1) AS DateString_1,
+    CONVERT(varchar, hireDate, 107) AS DateString_107,
+    CONVERT(varchar, monthlySalary) AS NumberString,
+    CONVERT(varchar, monthlySalary) AS NumberString2
+FROM employees; </pre>
+        <p>Common style codes used for coding date/time data to string data</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Output Style</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0 or 100</td>
+                    <td>Mon dd yyyy hh:miAM/PM</td>
+                </tr>
+                <tr>
+                    <td>01 or 101</td>
+                    <td>mm/dd/yy or mm/dd/yyyy</td>
+                </tr>
+                <tr>
+                    <td>7 or 107</td>
+                    <td>Mon dd yy or Mon dd, yyyy</td>
+                </tr>
+                <tr>
+                    <td>8 or 108</td>
+                    <td>hh:mi:ss</td>
+                </tr>
+                <tr>
+                    <td>10 or 110</td>
+                    <td>mm-dd-yy or mm-dd-yyyy</td>
+                </tr>
+                <tr>
+                    <td>12 or 112</td>
+                    <td>yymmdd or yyyymmdd</td>
+                </tr>
+                <tr>
+                    <td>14 or 114</td>
+                    <td>hh:mi:ss:mmm (24 hr clock)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>TRY_CONVERT() function</h3>
+        <p>The <code>TRY_CONVERT()</code> function behaves exactly the same as the <code>CONVERT</code> function except that if the conversion fails, the function returns a <i>NULL</i> value rather than throwing an error.</p>
+        <h3>ISNULL() Function</h3>
+        <p>The <code>ISNULL()</code> function allows for the replacement of null values to a value of choice.  It is a common occurrence when values in a database are left as <i>NULL</i>.  In cases where we would calculate values based on potential NULL values, calculations in general will fail.  Therefore having a way to replace NULL values with an actual value is important.</p>
+        <pre>SELECT ISNULL(commissionPercent,0) AS comPerc
+FROM employees;</pre>
+        <h2>Other Single-Line Functions</h2>
+        <p>The following links will provide an extensive library of functions that can be used in MS SQL.</p>
+        <p><strong>String Functions</strong> - <a href="https://web.archive.org/web/20240116064739/https://docs.microsoft.com/en-us/sql/t-sql/functions/string-functions-transact-sql?view=sql-server-ver15">Microsoft Documents - String Functions (Transact-SQL)</a></p>
+        <p><strong>Date and Time Functions</strong> - <a href="https://web.archive.org/web/20240116064739/https://docs.microsoft.com/en-us/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-ver15">Microsoft Documents - Date and Time Functions (Transact-SQL)</a></p>
+        <p><strong>Numeric Functions</strong> - <a href="https://web.archive.org/web/20240116064739/https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql?view=sql-server-ver15">Microsoft Documents - Decimal and Numeric Functions (Transact-SQL)</a></p>
+       
+    </div>  
+
+
+</body><!--
+     FILE ARCHIVED ON 06:47:39 Jan 16, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:01:16 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 3.439
+  exclusion.robots: 0.04
+  exclusion.robots.policy: 0.029
+  esindex: 0.015
+  cdx.remote: 21.215
+  LoadShardBlock: 113.759 (3)
+  PetaboxLoader3.resolve: 63.759 (3)
+  PetaboxLoader3.datanode: 106.602 (4)
+  load_resource: 110.454
+  nav: 0.155 (6)
+--></html>

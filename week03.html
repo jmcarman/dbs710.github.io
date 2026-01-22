@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=1344;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week03.html","20240116064741","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387661");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>DBS710 - Week 3 - Sub-Queries and Set Operators</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064741/http%3A//dbs211.ca/courses/dbs710/Week03.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week03.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064741"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://dbs211.ca/courses/dbs710/Week03.html" title="See a list of every capture for this URL">2 captures</a><div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 16 Jan 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px;"></div><div class="mt" style="display: none; width: 2px; height: 27px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927071936/http://dbs211.ca/courses/dbs710/Week03.html" title="07:19:36 Sep 27, 2023">Sep</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:41 Jan 16, 2024">JAN</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927071936/http://dbs211.ca/courses/dbs710/Week03.html" title="07:19:36 Sep 27, 2023"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:41 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:41 Jan 16, 2024">2024</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064741/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week03.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html#" data-url="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html#" data-url="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064741/http://dbs211.ca/courses/dbs710/Week03.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week03.html","20240116064741",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+<h1>3 - Sub-Queries and Set Operators</h1>
+<h2>Table of Contents</h2>
+<ul>
+    <li>Type of Queries</li>
+    <li>Review of Views</li>
+    <li>Sub-Queries</li>
+    <li>Venn Diagrams</li>
+    <li>Set Operators</li>
+</ul>
+<h2>Types of Query Results</h2>
+<p>In order to understand when and why you might use sub-queries, it is important to first understand the results that we get from non nested queries.  All queries produce a table of data, regardless of the number of columns or rows that are returned; the results is still a table.  However, looking closer we can determine that not all tables are the same and that tables that look one way might actually not be what they appear to be.</p>
+<p>So query results can generally be divided into 3 hierarchical categories.</p>
+<ul>
+    <li>Table - any data set that has at least one column, number of rows is irrelevant.</li>
+    <li>List - a result set that contains exactly one column, number of rows is irrelevant</li>
+    <li>Scalar - a result that is guaranteed to only ever have one column and one row.</li>
+</ul>
+<blockquote>It is sometimes misleading when you get a result that gives a single value (1 column and 1 row) but it cannot be considered a scalar, because if in the future the data changes and you could get more than one row, than it cannot be a scalar, but is a list.</blockquote>
+<p>Note that scalars are also lists and tables, lists are tables, but not scalars, and tables are tables, but not lists or scalars.</p>
+<h3>Examples</h3>
+<p>All of the following SELECT statements will produce tables, but cannot be classified as lists or scalars.</p>
+<h4>Tables</h4>
+<div class="GeneralSQL"></div>
+<pre>    SELECT * FROM employees;
+
+    SELECT firstname, lastname 
+    FROM employees;
+
+    SELECT employeeID, firstName, lastName 
+    FROM employees 
+    WHERE lower(lastname) LIKE 'jones' AND lower(firstname) LIKE 'andrew';
+</pre>
+<p>The third example above has multiple columns and looks like it would return a single row, but could have multiple rows as well.</p>
+<h4>Lists</h4>
+<div class="GeneralSQL"></div>
+<pre>    SELECT employeeID FROM employees;
+
+    SELECT lastname FROM employees;
+
+    SELECT employeeID
+    FROM employees 
+    WHERE lower(lastname) LIKE 'jones' AND lower(firstname) LIKE 'andrew';
+</pre>
+<p>The third example above can sometimes be confusing because we are obviously intending to find a single person and return their one employeeID, but there is no guarantee that there is not more than one 'Andrew Jones' working for the company, and therefore it is possible to get more than one row returned, and thus it can not be considered a scalar.</p>
+<h4>Scalar</h4>
+<div class="GeneralSQL"></div>
+<pre>    SELECT count(employeeID) FROM employees;
+
+    SELECT max(orderNumber)
+    FROM orders;
+
+    SELECT teamName
+    FROM teams
+    WHERE teamID = 12;
+</pre>
+<p>All three of the above queries can only ever return a single column and single row and therefore can be considered scalar queries.</p>
+
+<h3>Why is Query Type Important</h3>
+<p>The reason why we must consider the type of query is because we are about to embark on the implementation of sub-queries.  Inside of SELECT statements, we can place alternative sources for the information by nesting queries or placing a sub-query inside another query.  The type of query that can be placed will depend on where it will be placed.</p>
+<p>Inserting a sub-query in the <code>FROM</code> clause will require a table (remembering that both lists and scalars are also tables).</p>
+<p>Sub-queries can also be used within the <code>WHERE</code> clause can include lists and scalars.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Placing a sub-query after an "=" will require a scalar query as the comparison operator requires a single value to be compared.  <br>&nbsp;&nbsp;&nbsp;&nbsp;- Placing a sub-query within an <code>IN()</code> comparison operator will accept a list query, as the IN operator contains a comma separated list.</p>
+
+<h2>Examples</h2>
+<p>Let us learn through examples using the following table schema.</p>
+<img src="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/SampleDBaseSchema.PNG" width="640" style="border: 1px solid black;">
+
+<h3>Example 1</h3>
+<p>List all the employees, by name, whom work in the city of Seattle! (Do not use JOINS)</p>
+<hr>
+<p>We will start this solution by looking at the information we know (City = Seattle) and obtaining the location_id for that record or records</p>
+<div class="GeneralSQL"></div>
+<pre><span class="comment">-- STEP 1</span>
+SELECT location_id FROM locations WHERE lower(city) = 'seattle';
+<span class="comment">-- let us say this query return the value of 1700
+-- it must also be noted that although we only got 1 result, it is possible to get more than one, 
+--     so this must be considered a list query and not a scalar Query</span>
+</pre>
+<p>Now using this result of 1700 we can get the departments that are in that location or locations.</p>
+<div class="GeneralSQL"></div>
+<pre><span class="comment">-- STEP 2</span>
+SELECT department_id
+FROM departments
+WHERE location_id <span class="highlight">IN</span> (1700);
+<span class="comment">-- note that we used IN rather than =, because the previous query may have produced more than one value
+-- we might get results like 10, 90, 110, 190
+</span>
+</pre>
+<p>having returned a single column list of department_id's gives us then the opportunity to get the employee information whom work in those departments.</p>
+<div class="GeneralSQL"></div>
+<pre><span class="comment">-- STEP 3</span>
+SELECT employee_id, first_name, last_name
+FROM employees
+WHERE department_id IN (10, 90, 1010, 1090);
+<span class="comment">-- this should give us the list employees whom work in Seattle.
+</span>
+</pre>
+<p>so although we now have the answer we were looking for, we have created 3 queries and hard coded values at more than one step.  We should create queries that are more dynamic and allow us to use the same query for the results to many cities directly.</p>
+
+
+<div class="MSSQL"></div>
+<pre><span class="comment">-- first we will replace 'Seattle' from Step 1 above with a parameter</span>
+DECLARE @city varchar(20);
+SET @city = 'Seattle';
+
+SELECT location_id 
+FROM locations 
+WHERE lower(city) LIKE '%' + TRIM(lower(@city)) + '%';
+
+<span class="comment">-- this allows us to find the location_ids from any city typed in by a user.
+
+-- Next we will take step 2 and replace the value 1700 with the query that got us that value, with the parameter</span>
+SELECT department_id
+FROM departments
+WHERE location_id IN (
+    <span class="highlight">SELECT location_id 
+    FROM locations 
+    WHERE lower(city) LIKE '%' + TRIM(lower(@city)) + '%'</span>
+    );
+
+<span class="comment">-- Now we take step 3 and replace the hard coded values with the query above that would produce those values anyways</span>
+SELECT employee_id, first_name, last_name
+FROM employees
+WHERE department_id IN (
+    <span class="highlight">SELECT department_id
+    FROM departments
+    WHERE location_id IN (
+        SELECT location_id 
+        FROM locations 
+        WHERE lower(city) LIKE '%' + TRIM(lower(@city)) + '%'</span>
+        )
+    );
+</pre>
+<p>This final query above will now let us get the employees from any city at any time as typed in by a parameter.  Much more useful and reusable.</p>
+
+<p>So far we have seen examples where the sub-query is nested within the <code>WHERE</code> clause.  We can also use Tabular queries as the data source for queries as well.</p>
+<h3>Example 2</h3>
+<p>List all employees whom work in Seattle whose first name starts with an 'S'.</p>
+<hr>we will start where we ended with the last example!
+
+<div class="MSSQL"></div>
+<pre>SELECT employee_id, first_name, last_name
+    FROM employees
+    WHERE department_id IN (
+        <span class="highlight">SELECT department_id
+        FROM departments
+        WHERE location_id IN (
+            SELECT location_id 
+            FROM locations 
+            WHERE lower(city) LIKE '%' + TRIM(lower(@city)) + '%'</span>
+            )
+        );</pre>
+        <p>and then wrap those queries with a simple query!</p>
+<div class="GeneralSQL"></div>  
+<pre>SELECT * 
+FROM employees
+WHERE upper(first_name) LIKE 'S%';
+<span class="comment">A simple statement that does not yet take into account employees in Seattle yet!</span>
+</pre>
+<p>becomes ....</p>
+
+<div class="MSSQL"></div>
+<pre>DECLARE @city varchar(20);
+SET @city = 'Seattle';
+
+SELECT * 
+FROM (
+    <span class="highlight">SELECT employee_id, first_name, last_name
+    FROM employees
+    WHERE department_id IN (
+        SELECT department_id
+        FROM departments
+        WHERE location_id IN (
+            SELECT location_id 
+            FROM locations 
+            WHERE lower(city) LIKE '%' + TRIM(lower(@city)) + '%'
+            )
+        )</span>
+    )
+WHERE upper(first_name) LIKE 'S%';
+</pre>
+<p>so sub-queries can be used as the course for a <code>FROM</code> clause as well.  This is very similar to the use of a view, in fact sub-queries are used in conjunction with views very often to help assist in creating object oriented SQL code.</p>
+<h3>Example 3</h3>
+<p>List the employees, by name, and the department name from which they work, without using joins.</p>
+<hr>
+<p>So to get information, that will be an output column, in the output without using joins, it is important to get information from multiple tables.  We can utilize the fact that sub-queries can also be implemented in the <code>SELECT</code> clause in addition the the previous examples using the <code>WHERE</code> and <code>FROM</code> clauses.</p>
+
+<div class="GeneralSQL"></div>
+<pre>SELECT
+    first_name,
+    last_name,
+    (   SELECT department_name
+        FROM departments
+        WHERE department_id = e.department_id )
+FROM employees e
+ORDER BY last_name, first_name;
+</pre>
+<p>In the above solution, we can insert the employees <i>department_id</i> into the <code>WHERE</code> clause of the sub-query by using the <i>e</i> table alias.</p>
+<p>If we also recall from order of execution, that the <code>SELECT</code> clause executes iteratively, as a loop, through each row of the result set.  Therefore, the sub-query is run on each row of the employees table and thus we can get the specific department_id for each row.</p>
+
+
+
+
+<h2>Set Operators</h2>
+<p>It is often necessary to put two lists together that have similar columns, but very different queries and conditions to obtain.  A quick example would be: list all people a company contacts, both employees and customers.  For this example we might write SQL like:</p>
+<pre>SELECT firstName, lastName, email
+FROM employees;
+
+<span class="comment">-- and</span>
+
+SELECT nameFirst, nameLast, contactEmail
+FROM customers;
+</pre>
+
+<p>With the two above statements, we now would have to do more external work to make this a single list.  Even concepts of Joins and Sub-Queries would not help here as there is not necessarily any relationship between these two tables.  Therefore, we need another way to automate the combining of these two resultant sets.  This is called Set Operators.</p>
+
+<h3>Venn Diagrams and Set Operators (Math Style)</h3>
+<p>Just to give a little context, many of us took mathematics in high school, middle school, or the equivalent and usually that would cover the topics of Venn Diagrams, Set, and Sequences.  Most students often wonder, "Why am I learning this, and when will I ever use this in real life?"  Well database is a great example of where we use Venn Diagrams and Set Operators.</p>
+<p>For example, in mathematics:</p>
+<pre>Let A = { 1, 2, 3, 4, 6, 8, 10 }
+Let B = { 3, 5, 6, 9, 10 }
+
+A ⋃ B = { 1, 2, 3, 4, 5, 6, 8, 9, 10 } -- union
+A ⋂ B = { 3, 6, 10 }                   -- intersect
+A - B = { 1, 2, 4, 8 }                 -- minus or except
+</pre>
+<p>and we may represent these by: <br><img src="./DBS710 - Week 3 - Sub-Queries and Set Operators_files/Venn_SetOps.png" width="300px"></p>
+<p>so...</p>
+<pre>Let A = SELECT * FROM employees;
+Let B = SELECT * FROM customers;
+Let C = SELECT * FROM children;
+-- so we can do:
+UNION:      A ⋃ B
+INTERSECT:  A ⋂ B
+EXCEPT:     A - B
+</pre>
+<p>could be extended and visualized using Set Operators and Venn Diagrams</p>
+
+<h3>Set Operators</h3>
+<p>We will look at 4 different Set Operators that are commonly used in SQL that will allow the developer to answer most business questions when combined with other techniques, such as Joins, Sub-Queries, Filtering etc.</p>
+<p>The 4 operators we will look at are:
+    </p><ul>
+        <li>UNION</li>
+        <li>UNION ALL</li>
+        <li>INTERSECT</li>
+        <li>MINUS or EXCEPT</li>
+    </ul>
+<p></p>
+<p>We will use the following tables for examples on how these set operators work:</p>
+
+<table>
+    <caption>Employee and Customers Tables</caption>
+    <thead>
+        <tr>
+            <th colspan="3">Employees</th>
+            <th rowspan="2">&nbsp;</th>
+            <th colspan="3">Customers</th>
+        </tr>
+        <tr>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>nameFirst</th>
+            <th>nameLast</th>
+            <th>contactEmail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>js@email.com</td>
+            <td rowspan="3">&nbsp;</td>
+            <td>Julie</td>
+            <td>Wilson</td>
+            <td>jw@email.com</td>
+        </tr>
+        <tr>
+            <td>Andrew</td>
+            <td>Jones</td>
+            <td>aj@email.com</td>
+            <td>Raj</td>
+            <td>Patel</td>
+            <td>rp@email.com</td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>Bennet</td>
+            <td>sb@email.com</td>
+            <td>John</td>
+            <td>Smith</td>
+            <td>js@email.com</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>UNION</h3>
+<p><code>UNION</code> is the most used of the set operators, and we will look at how it works.  However, it is important to know the difference between UNION and UNION ALL as they have subtle differences that are critical to understand.</p>
+<p>So to get a complete list of people, we will need to combine the employees and customers lists into a single list.</p>
+<pre>SELECT firstName, lastName, email
+FROM employees;
+<span class="comment">-- and</span>
+SELECT nameFirst, nameLast, contactEmail
+FROM customers;
+</pre>
+<p>turns into</p>
+<pre><span class="comment">-- RED</span>
+SELECT firstName, lastName, email
+FROM employees  <span class="comment">-- note the lack of semi-colon here</span>
+
+UNION
+
+<span class="comment">-- BLUE</span>
+SELECT nameFirst, nameLast, contactEmail
+FROM customers;
+
+<span class="comment">-- All in ONE statement</span>
+</pre>
+<p>The results in:</p>
+<table>
+    <thead>
+        <tr>
+            <th>nameFirst</th>
+            <th>nameLast</th>
+            <th>email</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Andrew</td>
+            <td>Jones</td>
+            <td>aj@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>js@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Julie</td>
+            <td>Wilson</td>
+            <td>jw@email.com</td>
+            <td style="background-color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>Patel</td>
+            <td>rp@email.com</td>
+            <td style="background-color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>Bennet</td>
+            <td>sb@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<p>a few things to note:</p>
+<ul>
+    <li>The red rows are those from the first <code>SELECT</code> portion and the blue rows are from the second <code>SELECT</code> portion.</li>
+    <li>The data is <strong>sorted</strong> in alphabetical order by the first column.   - Normally this would be a primary key or other indexed field if they are present.</li>
+    <li><strong>Duplicate rows have been eliminated</strong> - The person 'John Smith' is only included in the list once, even though he appeared in both tables.</li>
+    <li>The <strong>column names</strong> are the names obtain from the first <code>SELECT</code> statement.  This means any aliases used in the second statement are irrelevant and not necessary.</li>
+</ul>
+<h4>Why is the data resorted without an <code>ORDER BY</code> clause?</h4>
+<p>When you eliminate duplicate records, especially in very large databases, it is much more efficient to sort the data first.  To understand this concept, let us look at this in more depth.</p>
+<p>If you have 100 records, to determine if a record is a duplicate you would: </p>
+<ul>
+    <li>Look at the 2nd record to see if it the same as the first one. If it is eliminate it.</li>
+    <li>Look at the 3rd record to see if it is the same as either of the first <strong>two</strong>, if it is eliminate it</li>
+    <li>Look at the 4th record to see if it is the same as any of the first <strong>three</strong>, if it is eliminate it</li>
+    <li>...</li>
+    <li>Look at the 100th record to see if it the same as <strong>ANY of the first 99</strong></li>
+</ul>
+<p>Obviously as the database gets larger, each new record added means MANY MANY more checks each time, greatly slowing down the database and it's processes.  To greatly improve this inefficiency, the data is sorted first.</p>
+<p>When you are comparing a record, to determine matches, it is significantly better if they are sorted.  When looking at the n<sup>th</sup> record, we will only need to look at the n-1<sup>th</sup> record to see if it matches.  This means that no matter how many records are in the database (23 or more than a million), each record can be determined to be a match by only looking at <strong>ONE</strong> previous record.</p>
+<p>Just for clarification, <br>
+- if not sorted, when reviewing the 100<sup>th</sup> record, we would have to compare to 99 other records<br>
+- if sorted, when reviewing the 100<sup>th</sup> record, we would only have to compare to 1 other record.<br>
+Comparing this if we were reviewing the one millionth record, it is obvious to see the efficiency here.</p>
+<h4>UNION summary</h4>
+<p>UNION combines</p>
+
+<h3>UNION ALL</h3>
+<p><code>UNION ALL</code> works very similar to <code>UNION</code> with a few subtle differences:</p>
+<ul>
+    <li>duplicates are NOT eliminated but included as multiple rows</li>
+    <li>The data is not re-sorted, the second list of rows will be simply below the first list of rows with each separate list in the order they would naturally be show in.</li>
+</ul>
+<p>Using the statement:</p>
+<pre>SELECT firstName, lastName, email
+FROM employees  <span class="comment">-- note the lack of semi-colon here</span>
+
+UNION ALL
+
+SELECT nameFirst, nameLast, contactEmail
+FROM customers;</pre>
+<p>we will see the resultant set of:</p>
+<table>
+    <thead>
+        <tr>
+            <th>nameFirst</th>
+            <th>nameLast</th>
+            <th>email</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Andrew</td>
+            <td>Jones</td>
+            <td>aj@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>js@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>Bennet</td>
+            <td>sb@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>js@email.com</td>
+            <td style="background-color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Julie</td>
+            <td>Wilson</td>
+            <td>jw@email.com</td>
+            <td style="background-color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>Patel</td>
+            <td>rp@email.com</td>
+            <td style="background-color: blue;">&nbsp;</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>NOTE: the red rows are from the first SELECT part and the blue rows from the second SELECT part.  Note that red and green are not mixed</p>
+<h3>INTERSECT</h3>
+<p>Like UNION and UNION ALL, INTERSECT is another set operator that works on multiple incoming resultant sets.  INTERSECT specifically finds records that EXACTLY match in both resultant sets.  Note: That an exact match means, all column values in both rows are identical.  Thus:</p>
+<pre>SELECT firstName, lastName, email
+FROM employees  <span class="comment">-- note the lack of semi-colon here</span>
+
+INTERSECT
+
+SELECT nameFirst, nameLast, contactEmail
+FROM customers;</pre>
+<p>results in: </p>
+
+<table>
+    <thead>
+        <tr>
+            <th>nameFirst</th>
+            <th>nameLast</th>
+            <th>email</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>js@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+    </tbody>
+    </table>
+    <p>The only row that identically appears in both resultant sets.</p>
+<h3>EXCEPT or MINUS</h3>
+<p>We use the words <code>EXCEPT</code> or <code>MINUS</code> to describe the same thing where as the only difference is which clause is available in different DBMSs.  <code>MINUS</code> is the more common usage and is used in Oracle, MySQL, PostGreSQL, and many others.  <code>EXCEPT</code> is the form of the clause that is used in MicroSoft SQL Server.</p>
+<p>This clause allows the statement to include all records in the first resultant set, and remove any records that also exist in the second resultant set.  Any records in the second resultant set that are not in the first set, are completely ignored.</p>
+<p>To see by example:</p>
+<pre>SELECT firstName, lastName, email
+FROM employees  <span class="comment">-- note the lack of semi-colon here</span>
+
+EXCEPT
+
+SELECT nameFirst, nameLast, contactEmail
+FROM customers;</pre>
+<p>results in:</p>
+<table>
+    <thead>
+        <tr>
+            <th>nameFirst</th>
+            <th>nameLast</th>
+            <th>email</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Andrew</td>
+            <td>Jones</td>
+            <td>aj@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>Bennet</td>
+            <td>sb@email.com</td>
+            <td style="background-color: red;">&nbsp;</td>
+        </tr>
+    </tbody>
+    </table>
+    <p>Note that: no records from the second resultant set are included in any way and that all records from the first resultant set are included except John Smith, whom was removed because that record also exists in the second resultant set.</p>
+
+</div>  
+
+</body><!--
+     FILE ARCHIVED ON 06:47:41 Jan 16, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:01:46 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 1.389
+  exclusion.robots: 0.057
+  exclusion.robots.policy: 0.045
+  esindex: 0.011
+  cdx.remote: 1111.551
+  LoadShardBlock: 76.971 (3)
+  PetaboxLoader3.datanode: 99.88 (4)
+  load_resource: 126.795
+  PetaboxLoader3.resolve: 74.375
+  nav: 0.137 (6)
+--></html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=220;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week05.html","20240116064745","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387665");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>DBS710 - 5 - Introduction to Dynamic SQL</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;" class="">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064745/http%3A//dbs211.ca/courses/dbs710/Week05.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week05.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064745"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://dbs211.ca/courses/dbs710/Week05.html" title="See a list of every capture for this URL">2 captures</a><div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 16 Jan 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20050101000000/http://dbs211.ca/courses/dbs710/Week05.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px; left: 225px;"></div><div class="mt" style="display: none; width: 2px; height: 27px; left: 226px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927091234/http://dbs211.ca/courses/dbs710/Week05.html" title="09:12:34 Sep 27, 2023">Sep</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:45 Jan 16, 2024">Jan</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927091234/http://dbs211.ca/courses/dbs710/Week05.html" title="09:12:34 Sep 27, 2023"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:45 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:45 Jan 16, 2024">2024</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064745/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week05.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html#" data-url="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html#" data-url="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./DBS710 - 5 - Introduction to Dynamic SQL_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./DBS710 - 5 - Introduction to Dynamic SQL_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064745/http://dbs211.ca/courses/dbs710/Week05.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week05.html","20240116064745",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./DBS710 - 5 - Introduction to Dynamic SQL_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./DBS710 - 5 - Introduction to Dynamic SQL_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./DBS710 - 5 - Introduction to Dynamic SQL_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./DBS710 - 5 - Introduction to Dynamic SQL_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./DBS710 - 5 - Introduction to Dynamic SQL_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+        <h1>5 - Introduction to Dynamic SQL</h1>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li>What is Dynamic SQL?</li>
+            <li>Hello World!</li>
+            <li>Running Scripts Basics</li>
+            <li>DECLARE and Parameters</li>
+            <li>Populating parameters from a SELECT statement</li>
+            <li>Scripting CRUD statements</li>
+            <li>Conditional Statements</li>
+            <li>Iterations or Loops</li>
+            <li>BREAK and CONTINUE</li>
+        </ul>
+        <h2>What is Dynamic SQL</h2>
+        <p>In MS SQL, dynamic SQL is part of T-SQL (Transactional SQL) and varies greatly between different dialects of SQL.  Specifically Oracle uses an extension to SQL called PL/SQL and SQL Server uses an extension to T-SQL.  Although they differ greatly, the fundamental concepts in both are relatively equivalent, so learning one will enable the learner to easily learn the other at a later time.</p>
+        <p>In all cases, dynamic SQL allows the use of software coding operators, algorithms, and patterns to create dynamic SQL that can even be taken as far as being developed using object oriented programming techniques.  The separation of concerns, code repeatability, and the reduction in workload are just come advantages of Dynamic SQL.</p>
+        <h2>Hello World!</h2>
+        <p>As you always do when learning a new language, we start with the typical Hello World! application.</p>
+<pre>BEGIN
+    PRINT 'Hello World!'
+END
+</pre>
+<p>In SSMS, highlight all three lines and execute it.  The output from the PRINT statements will appear in the messages output window.</p>
+
+        <h2>Running Scripts Basics</h2>
+        <h3>BEGIN and END</h3>
+        <p>
+            Scripting or statement <strong>"blocks"</strong> in SQL will be contained within a <code>BEGIN</code> and <code>END</code> container.  BEGIN and END are used for most code blocks and are often nested several levels deep.  This is somewhat similar to curly braces {} in languages like JavaScript and the C family of languages.  We will see this more as we progress through this chapters content.
+        </p>
+        <p>Another rule of thumb with <code>BEGIN</code> and <code>END</code> are that they are only required if there is more than one line of code to be executed.</p>
+
+        <h2>DECLARE and SET Parameters</h2>
+        <p>In SQL, a parameter, or a variable, can be declared using a <code>DECLARE</code> statement and prefixed with the "@" symbol.  </p><p>The value of a parameter can be set during the declaration as a default value or using the <code>SET</code> statement.</p>
+        <pre>BEGIN
+    DECLARE @x INT = 5;
+    DECLARE @y INT;
+    SET @y = 7;
+    SELECT @x + @y AS tot;
+END;</pre>
+
+        <h3>Populating parameters from a SELECT statement</h3>
+        <p>Parameter values can be set as the result of another SQL statement.</p>
+<pre>BEGIN
+    DECLARE @NumEmps INT;
+    SET @NumEmps = (SELECT Count(*) FROM employees);
+    PRINT 'There are ' + CONVERT(varchar, @NumEmps) + ' employees in the database.';
+END;</pre>
+        <h2>Scripting CRUD statements</h2>
+        <p>When we extend DML to include the other CRUD statements, INSERT, UPDATE, and DELETE we can use parameters to assist in how this works.  The purpose of doing this is such that code can be repeatable.</p>
+<pre>BEGIN
+    DECLARE @countryID char(2), @countryName nvarchar(40), @regionID tinyInt;
+    
+    SET @countryID = 'CA';
+    SET @countryName = 'Canada';
+    SET @regionID = 2;
+
+    INSERT INTO countries VALUES (@countryID, @countryName, @regionID);
+END;</pre>
+<p>If you can imagine where we will go with this, that the above code makes inserting records extremely repeatable once we stored named objects.</p>
+<p>Another example: </p>
+<pre>BEGIN
+    DECLARE @locationID INT = 100
+    DELETE FROM locations WHERE locationID = @locationID;
+END;
+</pre>
+<h3>Implicit System Functions</h3>
+<p>When executing CRUD statements, it will be equally important to retrieve feedback to if the statement was successful or failed.  The main indicator of this will be to determine the number of rows impacted by the statement.  The <code>@@ROWCOUNT</code> is a built in system function that returns the number of rows impacted by the single previous SQL statement. </p>
+<pre>BEGIN
+    DECLARE @NumRowsUpdated INT, @lastName nvarchar(20) = 'Smith'
+
+    UPDATE employees SET monthlySalary = monthlySalary * 1.01
+    WHERE lastName = @lastName;
+
+    SET @NumRowsUpdated = @@ROWCOUNT;
+    PRINT 'There were ' + CONVERT (varchar,@NumRowsUpdated) + ' employees given a raise of 1%';
+END
+</pre>
+<h3>Other System Functions</h3>
+<p>There are several system functions that exist in dynamic SQL that assist in obtained additional information about statements that are run.</p>
+<table>
+    <caption>System Functions</caption>
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>@@ROWCOUNT</code></td>
+            <td>returns the number of rows affected by the most recent SQL statement</td>
+        </tr>
+        <tr>
+            <td><code>@@SERVERNAME</code></td>
+            <td>returns the name of the local server</td>
+        </tr>
+        <tr>
+            <td><code>@@ERROR</code></td>
+            <td>returns the error number generated by the execution of the most recent SQL statement.  Returns 0 if no error occurred.</td>
+        </tr>
+        <tr>
+            <td><code>@@IDENTITY</code></td>
+            <td>returns the last value generated for an identity column on the server.  Returns NULL if no identity value was generated.</td>
+        </tr>
+        <tr>
+            <td><code>HOST_NAME</code></td>
+            <td>returns the name of the current workstation</td>
+        </tr>
+        <tr>
+            <td><code>SYSTEM_USER</code></td>
+            <td>returns the name of the current user</td>
+        </tr>
+    </tbody>
+</table>
+<p>Note that some system functions start with @@ and other do not.  This is simply a result of when the functions were added.  The original functions start with @@ while newer ones do not. i.e.: there is no real good reason.</p>
+<h3>@@IDENTITY</h3>
+<p>Along with @@ROWCOUNT, @@IDENTITY is one of the most used system functions with transactional SQL.  Let us image that we have a parent and child foreign key relationship between two tables and both tables use auto-numbering identity for their Primary Key.  When you insert the parent record, the PK would be auto generated and the SQL would not know the actual value when the child record is to be inserted, which requires the value to insert the Foreign Key (FK) value.  The @@IDENTITY function allows us to obtain the value of the PK inserted into the parent table, so that it can be used to insert the FK in the child table.</p>
+<pre>BEGIN
+    DECLARE @NewPK INT, @RowsInserted INT;
+
+    INSERT INTO parentTable (field1, field2) VALUES (value1, value2);
+    -- note we are not inserting the PK value as it is an identity (auto-number)
+
+    SET @NewPK = @@IDENTITY;
+
+    INSERT INTO childTable (field1, FK1, field2) VALUES (value1, @NewPk value2);
+
+    SET @RowsInserted = @@ROWCOUNT;
+
+    PRINT CONVERT(varchar,@RowsInserted) + ' child rows were inserted';
+END
+</pre>
+        <h2>Conditional Statements</h2>
+        <p>Just like other structured programming languages, dynamic SQL allows for the use of conditional statement.  These are very similar to those in languages such as JavaScript or C.</p>
+        <h3>IF - ELSE IF - ELSE structure</h3>
+        <p>To execute a statement or a block of statements based on a condition, you use the <code>IF</code>-<code>ELSE IF</code>-<code>ELSE</code> statement. When an IF statement is executed, SQL Server evaluates the conditional expression after the <code>IF</code> keyword. If this condition is true, the statement or block of statements after the <code>IF</code> keyword is executed.  If not, then each subsequent <code>ELSE IF</code> condition is evaluated.  If none of the <code>IF</code> or <code>ELSE IF</code> conditions are true, then the statement or block of statements after the <code>ELSE</code> keyword is executed.</p>
+        <h4>Syntax</h4>
+<pre>IF boolean_expression
+    statement
+ELSE IF boolean_expression
+    statement
+ELSE
+    statement
+
+<span class="comment">-- note that there is no END part of the IF ELSE structure</span>
+</pre>
+        <p>If any code block under any of the conditions requires more than 1 statement, then it must be surrounded in a <code>BEGIN..END</code> container.</p>
+<pre>IF boolean_expression
+    BEGIN
+        statement 1
+        statement 2
+    END
+ELSE IF boolean_expression
+    statement
+ELSE
+    statement
+</pre>
+        <h4>Examples</h4>
+        <h5>Example 1</h5>
+<pre>BEGIN
+    DECLARE @NumRows INT = 0, @departmentID INT = 30
+
+    UPDATE employees SET monthlySalary = monthlySalary * 1.1
+    WHERE departmentID = @departmentID;
+
+    SET @NumRows = @@ROWCOUNT
+
+    IF @NumRows = 0
+        PRINT 'No rows were updated!'
+    ELSE IF @NumRows = 1
+        PRINT 'One row was updated!'
+    ELSE
+        PRINT CONVERT(varchar, @NumRows) + ' rows were updated.'
+END
+</pre>
+<h5>Example 2</h5>
+<pre><span class="comment">-- Assuming both tables use an identity (auto-number) for the PK</span>
+BEGIN
+    DECLARE @parentFirstName nvarchar(20), 
+        @parentLastName nvarchar(20), 
+        @childFirstName nvarchar(20), 
+        @childLastName nvarchar(20);
+    DECLARE @parentID INT = 0, childID INT = 0;
+
+    INSERT INTO parentTable (firstName, lastName) VALUES (@parentFirstName, @parentLastName);
+    SET @parentID = @@IDENTITY;
+
+    IF @parentID &gt; 0
+        BEGIN   <span class="comment"> -- note the BEGIN..END block here</span>
+            PRINT 'Parent was inserted';
+            INSERT INTO childTable (firstName, lastname, parentID) 
+                VALUES (@childFirstName, @childLastName, @parentID);
+            SET @childID = @@IDENTITY;
+
+            PRINT 'both the parent and child were inserted successfully'
+        END;
+    ELSE
+        PRINT 'No parent record could be inserted, therefore no child is inserted either';
+END
+</pre>
+        <h3>CASE SELECT</h3>
+        <p>The <code>CASE SELECT</code> structure can be used in cases where there are many possibilities or as simply an alternative to an <code>IF</code> structure..</p><p>It is important to note that in the coding structure, CASE cannot be used as a standalone condition operator, but used more as an inline conditional algorithm.</p>
+        <h4>Example</h4>
+<pre>BEGIN
+    DECLARE @monthNum INT;
+    DECLARE @monthName varchar(9);
+    SET @monthNum = month(getdate());
+
+    SET @monthName = (SELECT 
+        CASE @monthNum
+            WHEN 1 THEN 'January'
+            WHEN 2 THEN 'February'
+            WHEN 3 THEN 'March'
+            WHEN 4 THEN 'April'
+            WHEN 5 THEN 'May'
+            WHEN 6 THEN 'June'
+            WHEN 7 THEN 'July'
+            WHEN 8 THEN 'August'
+            WHEN 9 THEN 'September'
+            WHEN 10 THEN 'October'
+            WHEN 11 THEN 'November'
+            WHEN 12 THEN 'December'
+        END);
+
+    Print 'Today''s day name is: ' + @monthName;
+END
+</pre>
+        <h3>IF EXISTS</h3>
+        <p>The IF EXISTS statement can be used to determine if a specific database object exists in the database before performing an associated operation.</p>
+        <pre>DROP table employees IF EXISTS;</pre>
+        <p>OR</p>
+        <pre>IF EXISTS (SELECT * FROM sys.tables WHERE name = 'employees')
+            DROP TABLE employees;</pre>
+            <p> You can use the OBJECT_ID function to check for the existence of a table, view, stored procedure, user-defined function, or trigger. You use the DB_ID function to check for the existence of a database. Both functions return a null value if the object doesn’t exist. Otherwise, they return the object’s identification number.</p>
+<pre>IF OBJECT_ID('InvoiceCopy') IS NOT NULL 
+    DROP TABLE InvoiceCopy;
+</pre>
+        <h2>Iterations or Loops</h2>
+        <p>Like conditional structures, looping, or iteration, is also possible in SQL.  We will specifically look at the while loop.<i> (Note that a FOR loop does not exist in SQL Server T-SQL)</i></p>
+        <h4>Syntax</h4>
+<pre>WHILE expression
+    BEGIN
+        &lt;statement block&gt;
+        &lt;BREAK or CONTINUE&gt;
+    END</pre>
+<h4>Example 1 - Simple Counting</h4>
+<pre>DECLARE @i INT = 0, @max INT = 10;
+WHILE @i &lt; @max
+    BEGIN
+        SET @i = @i + 1;
+        PRINT 'Number: ' + CONVERT(varchar, @i);
+    END
+
+<span class="comment">-- Output
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5
+Number: 6
+Number: 7
+Number: 8
+Number: 9
+Number: 10
+</span></pre>
+<h4>Example 2 - Multiplication Table</h4>
+<p>While loops can be nested as well to simulate a 2-dimensional object, such as a 2D array or a coordinate system, or 2 dimensional data system.</p>
+<pre>DECLARE
+    @row INT = 0,
+    @col INT = 0,
+    @maxNum INT = 10,
+    @rowString nvarchar(255) = ''
+PRINT '-------------------------------------------'
+WHILE @row &lt;= @maxNum
+    BEGIN
+        SET @rowString = STR(@row,3)
+        WHILE @col &lt;= @maxNum
+            BEGIN
+                SET @rowString = @rowString + STR(@row * @col, 6)
+                SET @col = @col + 1
+        END
+        SET @row = @row + 1
+        SET @col = 0
+        PRINT @rowString
+    END
+PRINT '-------------------------------------------'
+</pre>
+<p>outputs...</p>
+<pre>-------------------------------------------
+  0     0     0     0     0     0     0     0     0     0     0     0
+  1     0     1     2     3     4     5     6     7     8     9    10
+  2     0     2     4     6     8    10    12    14    16    18    20
+  3     0     3     6     9    12    15    18    21    24    27    30
+  4     0     4     8    12    16    20    24    28    32    36    40
+  5     0     5    10    15    20    25    30    35    40    45    50
+  6     0     6    12    18    24    30    36    42    48    54    60
+  7     0     7    14    21    28    35    42    49    56    63    70
+  8     0     8    16    24    32    40    48    56    64    72    80
+  9     0     9    18    27    36    45    54    63    72    81    90
+ 10     0    10    20    30    40    50    60    70    80    90   100
+-------------------------------------------  
+</pre>
+        <h2>BREAK and CONTINUE</h2>
+        <h3>BREAK</h3>
+        <p>It is quite often when iterating through data, that we find what we are looking for, or complete our task, before the entire loop has completed.  It is best practice at this point to exit the loop and avoid unnecessary iteration or processing, since we already have our conclusion. Therefore a way is needed to exit the loop before the <code>WHILE</code> expression is met.  For this we can use the <code>BREAK</code> statement.</p>
+
+    <h4>Example</h4><p>Iterate through the numbers 1 to 100 and add them up, at what number will the total exceed 500?</p>
+<pre>DECLARE 
+    @i INT = 0,
+    @iMax INT = 100,
+	@total INT = 0,
+	@totalMax INT = 500
+WHILE @i &lt;= @iMax
+    BEGIN
+        SET @total = @total + @i
+        IF @total &gt;= @totalMax BREAK
+        SET @i = @i + 1
+    END
+
+PRINT 'The total exceeds ' + STR(@totalMax,3) + ' when @i is ' + STR(@i,3)
+<span class="comment">-- output
+The total exceeds 500 when @i is  32</span>
+</pre>
+<p>When the <code>@total</code> value exceeds <code>@totalMax</code>, there is no point in continuing the iteration, as we have reached our answer.  Additionally, by exiting immediately, the value of <code>@i</code> is preserved as the answer we were looking for.</p>
+<h3>CONTINUE</h3>
+<p>The <code>CONTINUE</code> statement can be used to discontinue or skip a current iteration.  This does not exit the loop, just the current instance through the loop.</p>
+<h4>Example</h4>
+<p>Print the numbers 1 to 10, skipping 4 and 7</p>
+<pre>DECLARE @i INT = 0, @iMax INT = 10
+WHILE @i &lt; @iMax
+    BEGIN
+        SET @i = @i + 1
+        IF @i = 4 OR @i = 7 CONTINUE <span class="comment">-- skips the rest of this iteration of the loop and goes back to the WHILE again </span>
+        PRINT STR(@i,2);
+    END
+<span class="comment">-- output
+ 1
+ 2
+ 3
+ 5
+ 6
+ 8
+ 9
+10</span></pre>
+    </div>
+ 
+</body><!--
+     FILE ARCHIVED ON 06:47:45 Jan 16, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:01:46 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 0.476
+  exclusion.robots: 0.034
+  exclusion.robots.policy: 0.025
+  esindex: 0.007
+  cdx.remote: 28.741
+  LoadShardBlock: 70.808 (3)
+  PetaboxLoader3.resolve: 62.71 (3)
+  PetaboxLoader3.datanode: 74.49 (4)
+  load_resource: 92.981
+  nav: 0.123 (6)
+--></html>

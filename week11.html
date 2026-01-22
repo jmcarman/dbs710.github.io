@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=547;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week11.html","20240116064749","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387669");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>DBS710 - 11 - MongoDB CRUD Statements</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;" class="">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064749/http%3A//dbs211.ca/courses/dbs710/Week11.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week11.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064749"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://dbs211.ca/courses/dbs710/Week11.html" title="See a list of every capture for this URL">2 captures</a><div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 16 Jan 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20041201000000/http://dbs211.ca/courses/dbs710/Week11.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px; left: 200px;"></div><div class="mt" style="display: none; width: 2px; height: 27px; left: 223px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927080643/http://dbs211.ca/courses/dbs710/Week11.html" title="08:06:43 Sep 27, 2023">Sep</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:49 Jan 16, 2024">Jan</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927080643/http://dbs211.ca/courses/dbs710/Week11.html" title="08:06:43 Sep 27, 2023"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:49 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:49 Jan 16, 2024">2024</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064749/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week11.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#" data-url="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#" data-url="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./DBS710 - 11 - MongoDB CRUD Statements_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./DBS710 - 11 - MongoDB CRUD Statements_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week11.html","20240116064749",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./DBS710 - 11 - MongoDB CRUD Statements_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./DBS710 - 11 - MongoDB CRUD Statements_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./DBS710 - 11 - MongoDB CRUD Statements_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./DBS710 - 11 - MongoDB CRUD Statements_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./DBS710 - 11 - MongoDB CRUD Statements_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+<h1>11 - NoSQL and MongoDB - CRUD Statements</h1>
+        <h2>
+            Table of Contents</h2>
+        <ul>
+            <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Welcome">Welcome</a></li>
+            <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Databases">Create/Drop Databases</a></li>
+            <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Collections">Create/Remove Collections</a></li>
+            <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Documents">Create/Update/Remove Documents</a></li>
+            <ul>
+                <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Insert">INSERT</a></li>
+                <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Remove">REMOVE</a></li>
+                <li><a href="https://web.archive.org/web/20240116064749/http://dbs211.ca/courses/dbs710/Week11.html#Update">UPDATE</a></li>
+            </ul>
+        </ul>
+        <h2>Suggested Reading Materials</h2>
+        <ul>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064749/https://senecacollege-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_pq_ebook_centralEBC4442363&amp;vid=01SENC&amp;search_scope=default_scope&amp;tab=default_tab&amp;lang=en_US&amp;context=PC">Textbook - MongoDB - Chapters 3 and 4</a>
+                </li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064749/https://www.w3schools.com/js/js_json_intro.asp">W3Schools JSON Tutorials</a>
+                </li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064749/https://mongodb.com/">MongoDB Website</a></li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064749/https://university.mongodb.com/">MongoDB University</a></li>
+                </ul>
+        <hr>
+        <h2 id="Welcome">
+            Welcome to Chapter 11</h2>
+        <p>
+            Welcome to chapter 11 of DBS710, Advanced Database Systems.&nbsp; This week we continue our work with MongoDB in the area of writing statements to manipulate the data in the database, the equivalent of the SQL statements known as CRUD:</p>
+        <ul>
+            <li>Be able to create and drop databases, collections and documents within the MongoDB environment.</li>
+            <li>Create, Update and Delete documents in MongoDB</li>
+        </ul>
+<h2 id="Databases">Create or Drop Databases</h2>
+<h4>Creating Using MongoDB Shell</h4>
+<p>MongoDB creates a database (if it does not exist) when you insert the first document into your database.</p>
+<pre>&gt; use NewDatabaseName
+&gt; db.NewCollection.insertOne({"keyname": "value"})
+</pre>
+<p>Both the database, NewDatabaseName, and collection, NewCollection, will be created when the second line is executed.</p>
+<h4>Dropping Using MongoDB Shell</h4>
+<p>To drop a database, i.e. delete it permanently
+</p><pre>&gt; use NewDatabaseName
+&gt; db.dropDatabase()
+</pre>
+removes the current database and all data inside it.  The use statement is only required if the database to be deleted is not the current database.  This will be the case when first loading the shell each day.<p></p>
+<h4>Creating Using Compass</h4>
+<p>Alternatively you can use Compass to create a database from the main screen by clicking on "Create Database" and entering the database name and the first collection name.<br><img src="./DBS710 - 11 - MongoDB CRUD Statements_files/Compass_03.png" width="300"></p>
+<h4>Dropping Using Compass</h4>
+<p>To Drop a database within Compass, navigate to the main screen by clicking on "Local" in the top left corner, then clicking the trashcan icon beside the database to be deleted.  Note that only admins can delete the three reserved databases present.  In Compass, you will be prompted to type in the database name to confirm the deletion as an added security protocol.</p>
+<h2 id="Collections">Create or Drop Collections</h2>
+<h4>Creating Using MongoDB Shell</h4>
+<p>In addition to creating collections while creating databases shown above, you can choose to create a second collection.  By setting the current database first and then using a insert statement to add a document
+</p><pre>&gt; db.<i>NewCollectionName</i>.insert({"keyname":"value", "keyname2":"value2"})
+<span class="comment">WriteResult({ "nInserted" : 1 })</span>  
+</pre>
+<p></p>
+<h4>Dropping Using MongoDB Shell</h4>
+<p>With the current database set correctly, you can type</p><pre>&gt; db.<i>CollectionName</i>.drop();</pre><p></p>
+<h4>Creating using Mongo Compass</h4>
+<p>From the main MongoDB screen where the databases are listed, you can click on the correct database and then either click the <code>CREATE COLLECTION</code> button or Click the <code>+</code> icon beside the database name.  Both bring up the create collection screen where you type in the name and click <code>CREATE COLLECTION</code>.</p>
+<h4>Dropping Using Mongo Compass</h4>
+<p>To drop a collection and all the contained documents, click on the correct database and on the list of collections, hit the trashcan icon beside it.  To verify the drop, you are prompted to type in the collection name and then click the <code>DROP COLLECTION</code> button.<br><img src="./DBS710 - 11 - MongoDB CRUD Statements_files/compass_08.png" width="300"></p>
+
+<h2 id="Documents">Manipulating Documents - CRUD</h2>
+<h3 id="Insert">INSERT</h3>
+<p>The <code>insertOne</code> function can be used to insert a single document into a collection.</p>
+<pre>&gt; db.<i>collectionName</i>.insertOne({"key1":value1, "key2":value2, "key3":value3})
+</pre>
+<p>The insertion automatically creates an _id key and an auto generated value for each document.  You can override this feature by including a "_id" key in the document insertion.</p>
+<p><strong>PRACTICE:</strong> Insert one document into the book collection, the insertion will be the book "Lord of the Rings" and include the author as "J.R.R. Tolkien".  Use the books ISBN, 9780007488377, as the document key value.</p>
+<pre>&gt; db.book.insertOne({"_id" : "9780007488377", "title" : "Lord of the Rings", "author" : "J.R.R. Tolkien"})
+<span class="comment">{ "acknowledged" : true, "insertedId" : "9780007488377" }</span>
+</pre>
+
+<h4>Bulk INSERT</h4>
+<p>In the Shell, we use the <code>.insert</code> function to add one or more documents to a collection.
+</p><p>To insert a single row with <code>.insert</code></p>
+<pre>&gt; db.<i>collectionName</i>.insert({"key1":value1, "key2":value2, "key3":value3})</pre>
+<p>or inserting multiple documents at the same time:</p>
+<pre>&gt; db.<i>collectionName</i>.insert({"key1":value1, "key2":value2}, {"key1" : value1b, "key2" : value2b})
+</pre>
+<h4>Example:</h4>
+<p>Insert both a Jeep Cherokee (2 doors) and a Nissan Maxima (4 doors) as documents to the car collection in one statement</p>
+<pre>&gt; db.car.insert([{"make" : "Jeep", "model" : "Cherokee", "numDoors" : "2"},
+... {"make" : "Nissan", "model" : "Maxima", "numDoors" : 4}])
+<span class="comment">BulkWriteResult({
+    "writeErrors" : [ ],
+    "writeConcernErrors" : [ ],
+    "nInserted" : 2,
+    "nUpserted" : 0,
+    "nMatched" : 0,
+    "nModified" : 0,
+    "nRemoved" : 0,
+    "upserted" : [ ]
+})</span>
+</pre>
+<p>The following code would fail
+</p><pre>&gt; db.foo.insert([{"_id" : 0}, {"_id" : 1}, {"_id" : 1}, {"_id" : 2}])
+</pre>
+as the _id is duplicated.  The first 2 would insert correctly, but the second 2 would fail.
+<p></p>
+<p>The <strong><i>insertMany</i></strong> function can also be used for bulk inserts.</p>
+<pre>&gt; db.blog.insertMany([
+… {"title" : "My Blog Post", "content" : "Here's my blog post."},
+… {"title" : "New Post", "content" : "Here's the new blog post."},
+… {"title" : "Public Post", "content" : "Here's the public post."},
+])
+</pre>
+<h3 id="Remove">Deleting Documents (REMOVE)</h3>
+<p>The <strong><i>remove</i></strong> function deletes documents and can be used in several forms:
+</p><pre>&gt; db.<i>collectionname</i>.remove()
+</pre>removes ALL documents in the given collection.<p></p>
+<p>The following command removes all documents where the keyname field's value is the value provided.
+</p><pre>&gt; db.<i>collectionname</i>.remove{"keyname" : value}
+</pre>
+for example:
+<pre>&gt; db.<i>collectionname</i>.remove{"make" : "Honda"}
+</pre>
+would remove all cars where the make was set to Honda, regardless of all other values.  This would be the equivalent of the SQL statement:
+<pre>DELETE FROM cars WHERE make = 'Honda';</pre>
+that has no filtering by primary key.
+<p></p>
+<blockquote><span style="color: red;">The documents cannot be recovered after they are removed.</span></blockquote>
+
+<h3 id="Update">Updating Documents (UPDATE)</h3>
+<p>There are two main functions to update data in a MongoDB:  <strong><i>.replace()</i></strong> and <strong><i>.update()</i></strong>.  Let us look at replace first.</p>
+<h4>Replace and ReplaceOne</h4>
+<p>To replace a document with a new one, the <strong><i>replaceOne()</i></strong> function is used.</p>
+<p>To replace the following document (in the People collection):
+</p><pre>{ "name" : "Joe" }
+</pre>
+we could use something like:
+<pre>&gt; db.people.replaceOne({"name" : "Joe"}, {"name" : "Joe", "friends" : 32, "enemies" : 2})
+</pre>
+It is possible to change Joe's name too.
+<p></p>
+<h4>Update()</h4>
+<p>The <i>update()</i> function is used to update the value of a key in a document and takes 2 parameters:</p>
+<ol>
+    <li>a query document to locate the document to update (like a WHERE clause in SQL)</li>
+    <li>a modifier document describing the changes to be made (like the SET clause in SQL)</li>
+</ol>
+<p>The update operation is atomic, meaning that the LILO (last-in, last-out) philosophy is applied.  If there are two update requests coming to the server, the one that reaches the server first will be executed, and when it is done, the second one will be executed.
+</p>
+<h5>A Basic Update</h5>
+<pre><span class="highlight">given an existing record : { "_id" : 2, "fname" : "Josh", "lname" : "Phan", "favNum" : 16 }</span>
+&gt; db.students.update({"_id": 2} , {"fname" : "Josh", "lname": "Phan", "favNum" : 22, "favColor" : "Red"})
+<span class="comment">WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</span>
+</pre>
+<p>NOTE: All the keys and values are included except the <i>_id</i> key.  This is important as the following code will cause major problems.</p>
+<pre><span class="highlight">given an existing record : { "_id" : 2, "fname" : "Josh", "lname" : "Phan", "favNum" : 16 }</span>
+&gt; db.students.update({"_id": 2} , {"favColor" : "Red"})
+<span class="comment">WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</span>
+<span class="highlight">RESULTS IN : { "_id" : 2, "FavColor" : "Red" }</span>
+</pre>
+<p>NOTE: All the other Keys and Values were lost using that statement.  Be CAREFUL.</p>
+<p>To solve this you can use a little JavaScript.</p>
+<pre><span class="highlight">given an existing record : { "_id" : 2, "fname" : "Josh", "lname" : "Phan", "favNum" : 16 }</span>
+&gt; var id2 = db.students.findOne({"_id" : 2});
+&gt; id2.favColor = "Red";
+<span class="comment">Red</span>
+&gt; db.students.update({"_id" : 2}, id2);
+<span class="comment">WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</span>
+</pre>
+<p>to delete a key and value from a record, you can use the same code as above and add:</p>
+<pre>&gt; delete id2.favNum;
+&gt; db.students.update({"_id" : 2}, id2);
+<span class="comment">WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</span>
+</pre>
+<p>This would simply remove the favNum key and value from the document with _id 2.</p>
+
+<h4>Duplicate Key/Value Pairs</h4>
+<p>Assume we have the following documents:</p>
+<pre>&gt; db.people.find()
+{"_id" : ObjectId("4b2b9f67a1f631733d917a7b"), "name" : "joe", "age" : 65},
+{"_id" : ObjectId("4b2b9f67a1f631733d917a7c"), "name" : "joe", "age" : 20},
+{"_id" : ObjectId("4b2b9f67a1f631733d917a7d"), "name" : "joe", "age" : 49}
+</pre>
+<p>Let’s say we want to increment the value of age for the second document.</p>
+<pre>    &gt; joe = db.people.findOne({"name" : "joe", "age" : 20});
+    {
+        "_id" : ObjectId("4b2b9f67a1f631733d917a7c"),
+        "name" : "joe",
+        "age" : 20
+    }
+    &gt; joe.age++;                                 <span class="comment">// makes joe 21 now</span>
+    &gt; db.people.update({"name" : "joe"}, joe);
+    <span class="highlight">E11001 duplicate key on update</span>
+
+</pre>
+<p>
+       The update function wants to replace the updated document to the first matching {"name" : "joe"}. But when updating there is another document with the same _id which is the second document. The update will fail.
+
+</p>  <pre>&gt; db.people.update({"_id" : ObjectId("4b2b9f67a1f631733d917a7c")}, joe)</pre>
+<h3>Update Modifiers</h3>
+<p>Now, if we want to update specific Key Values within a document we can use modifiers to alter, add or remove key values.</p>
+<h4>$inc Modifier</h4>
+<p>The <i>$inc</i> modifier can be used to increment values by a supplied amount.</p>
+<pre>&gt; db.websites.findOne({"url":"www.example.com"});
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "url" : "www.example.com",
+    "pageviews" : 52
+}</span>
+&gt; db.analytics.update({"url" : "www.example.com"}, {"$inc" : {"pageviews" : 1}})
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "url" : "www.example.com",
+    "pageviews" : <span class="highlight">53</span>
+}</span>
+</pre>
+<h4>$set Modifier</h4>
+<p>The <i>$set</i> modifier allows you to update a specific field without replacing the entire document.  If the key provided does not exist, it will create it.</p>
+<p>For Example: given the following document:</p>
+<pre><span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "url" : "www.example.com",
+    "pageviews" : 52
+}</span></pre>
+<p>We can use the <i>.update()</i> function to change a value for a specific existing key.</p>
+<pre>&gt; db.websites.update({"url" : "www.example.com"}, {"$set" : {"pageviews" : 23}})
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "url" : "www.example.com",
+    "pageviews" : <span class="highlight">23</span>
+}</span>
+</pre>
+<p>We can use the <i>.update()</i> function to add a new key and value to an existing document.</p>
+<pre>&gt; db.websites.update({"url" : "www.example.com"}, {"$set" : {"homepage" : "/index.html"}})
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "url" : "www.example.com",
+    "pageviews" : 23
+    "homepage" : <span class="highlight">"/index.html"</span>
+}</span>
+</pre>
+<h5>Using Set for Nested (Embedded) Documents</h5>
+<p>The <i>$set</i> operator can be used to update an embedded document.</p>
+<pre>&gt; db.blog.posts.findOne({"title":"A Blog Post"});
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "title" : "A Blog Post",
+    "content" : "...",
+    "author" : {
+        "name" : "joe",
+        "email" : "joe@example.com"
+    }
+}
+</span>
+&gt; db.blog.posts.update({"author.name" : "joe"},
+... {"$set" :{"author.name" :"joe schmoe"}})
+&gt; db.blog.posts.findOne()
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "title" : "A Blog Post",
+    "content" : "...",
+    "author" : {
+        "name" : "joe schmoe",
+        "email" : "joe@example.com"
+    }
+}</span>
+</pre>
+
+<h4>$unset Operator</h4>
+<p>The <i>$unset</i> function is used to remove a key from a document.</p>
+<pre>&gt; db.websites.update({"url":"www.example.com")},{"$unset", "homepage":"index.html"});
+<span class="comment">{
+    "_id" : ObjectId("4b253b067525f35f94b60a31"),
+    "url" : "www.example.com",
+    "pageviews" : 23
+    <span style="text-decoration: line-through;">"homepage" : <span class="highlight">"/index.html"</span></span>
+}</span>
+</pre>
+<p>the homepage key and value are deleted.</p>
+
+<h2>MongoDB Queries</h2>
+
+<p>There are many similarities between queries in NoSQL and those in relational SQL, but there are also many differences.  So we will go through the basics one step at a time and for the purposes of examples or demonstrations, we will use a collection of data called FoodTrolley containing the following documents.</p>
+<h4>Sample Data</h4>
+<p>Database: <strong>HarryPotter</strong><br>
+CollectionName: <strong>FoodTrolley</strong></p>
+<pre>[
+    {"_id":1,
+        "FoodItem":"Chocolate Frogs",
+        "Description":"literally chocolate shaped like a frog that jumps around - comes with a wizard card",
+        "Price":1.2,
+        "Inventory":56},
+    {"_id":2,
+        "FoodItem":"Bertie Bots Every Flavour Beans",
+        "Description":"Basic jelly beans made to taste like just about anything",
+        "Price":12.5,
+        "Flavours":["Pear","Peppermint","Rocky Road","Salt","Soap","Toothpaste","Vanilla","Watermelon"]},
+    {"_id":3,
+        "FoodItem":"Pumpkins Pasties",
+        "Description":"Pastries made to taste like pumpkins",
+        "Price":1.8,
+        "Inventory":14},
+    {"_id":4,
+        "FoodItem":"Cauldron Cakes",
+        "Description":"Cauldron shaped licorice flavoured sweets",
+        "Price":1.3},
+    {"_id":5,
+        "FoodItem":"Licorice Wands",
+        "Price":0.9,
+        "Colour":"Black"}
+]
+</pre>
+<h3>Find()</h3>
+<p>The find() operation is used to find documents within a collection.  This is the equivalent of SELECT in SQL.  The general syntax of the find() command is:</p>
+<pre>&gt; db.collectionname.find({filter conditions},{keys to include in the output results});
+</pre>
+<p>where the filter condition(s) would be the equivalent of the <code>WHERE</code> sql clause and the keys to include would be the list of fields included in the <code>SELECT</code> clause in SQL.  Both the condition and the keys must be in JavaScript object notation with key:value pairs.</p>
+<p>To list all documents and all keys in a collection, the filter and keys would be left blank:</p>
+<pre>&gt; db.collectionname.find(); <span class="comment">is the equivalent of: <code>SELECT * FROM tablename </code></span></pre>
+<h3>Choosing Which Keys to Output</h3>
+<p>Like in SQL, you can select which key/value pairs are included in the output and which are not.</p>
+<pre>&gt; db.collectionname.find({},{key1:1, key2:1});</pre>
+<p>Would show all documents and include the _id key as well as both key1 and key2.  We typically use a 0 to specify not to show a key and 1 to show it.</p>
+
+<h4>Example 1</h4>
+<pre>&gt; db.FoodTrolley.find({},{FoodItem:1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }
+{ "_id" : 2, "FoodItem" : "Bertie Bots Every Flavour Beans" }
+{ "_id" : 3, "FoodItem" : "Pumpkins Pasties" }
+{ "_id" : 4, "FoodItem" : "Cauldron Cakes" }
+{ "_id" : 5, "FoodItem" : "Licorice Wands" }
+</span></pre>
+<p>Note that the _id is shown by default, you must specify if you do not want it to show.</p>
+<h4>Showing the _id or not</h4>
+<p>The _id key is shown by default.  In order to not show the _id, we must specify that it is not to be shown like:</p>
+<pre>&gt; db.FoodTrolley.find({},{FoodItem:1,_id:0})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "FoodItem" : "Chocolate Frogs" }
+{ "FoodItem" : "Bertie Bots Every Flavour Beans" }
+{ "FoodItem" : "Pumpkins Pasties" }
+{ "FoodItem" : "Cauldron Cakes" }
+{ "FoodItem" : "Licorice Wands" }
+</span></pre>
+
+<h3>Filter Results</h3>
+<p>To choose a specific value to filter by we can add a key:value pair to the filter portion of the command:</p>
+<pre>&gt; db.collectionname.find({filter conditions});</pre>
+<h4>Example 1</h4>
+<pre>&gt; db.FoodTrolley.find({"FoodItem":"Chocolate Frogs"})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, 
+    "FoodItem" : "Chocolate Frogs", 
+    "Description" : "literally chocolate shaped like a frog that jumps around - comes with a wizard card", 
+    "Price" : 1.2, 
+    "Inventory" : 56 }</span></pre>
+<p>and combing the filter and key:value choice portions we can do something like:</p>
+<pre>&gt; db.FoodTrolley.find({"FoodItem":"Chocolate Frogs"}, {FoodItem: 1, inventory: 1})
+</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }</span></pre>
+
+<h3>Wildcards</h3>
+<p>We sometimes need the ability to search for a smaller string within a value and in SQL we would use the LIKE operator with the * or % comparator.  In MongoDB, we can use easy regular expressions to do the same thing.</p>
+<h4>Example</h4>
+<pre>&gt; db.FoodTrolley.find({FoodItem: /Frog/}, {FoodItem: 1})
+    <span class="comment">-- note that the expression is <strong>case sensitive</strong> (using frog rather than Frog would return no results</span>
+</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }</span></pre>
+<p>However, if we investigate further, we will see that this string search is case sensitive!  </p>
+<pre>&gt; db.FoodTrolley.find({FoodItem: /frog/}, {FoodItem: 1})
+    <span class="comment">-- note that the expression is case sensitive (using frog rather than Frog would return no results</span>
+</pre>
+<p>will return no results because of the lower case f on frog</p>
+    <p>To make the search find result regardless of case, we can use the <code>i</code> regex qualifier</p>
+
+<h4>Example - case sensitivity</h4>
+<pre>&gt; db.FoodTrolley.find({FoodItem: /frog/<span class="highlight">i</span>}, {FoodItem: 1})
+    <span class="comment">-- note that the expression is <strong>case sensitive</strong> (using frog rather than Frog would return no results</span>
+</pre>
+<h3>Using a Variety of Comparators</h3>
+<p>Sometimes we need to use different comparators in our filters, such as: <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code>, etc.</p>
+<p>For these comparators, we can use modifiers in our key value pairs.  These modifiers are:</p>
+<table>
+    <thead>
+    <tr>
+        <th>Comparator</th>
+        <th>Modifier</th>
+    </tr>
+    </thead>    
+    <tbody>
+        <tr>
+            <td>&gt;</td>
+            <td>$gt</td>
+        </tr>
+        <tr>
+            <td>&gt;=</td>
+            <td>$gte</td>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td>$lt</td>
+        </tr>
+        <tr>
+            <td>&lt;=</td>
+            <td>$lte</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>$ne</td>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>$eq</td>
+        </tr>
+        <tr>
+            <td>IN</td>
+            <td>$in</td>
+        </tr>
+        <tr>
+            <td>NOT IN</td>
+            <td>$nin</td>
+        </tr>
+    </tbody>
+</table>
+<p>Each modifier is entered as the key and the value will be another nested key/value pair representing the comparison values.</p>
+<h4>&gt; Example</h4>
+<p>List all food items where the inventory is more than 20!</p>
+<pre>&gt; db.FoodTrolley.find({Inventory: {$gt: 20}}, {FoodItem: 1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }</span></pre>
+<p>Note that not all the documents contain a key called "Inventory", so only those documents that both include Inventory and the value is greater than 20 was returned.</p>
+
+<h4>Between Example</h4>
+<p>Find all food items whose inventory is between 12 and 60 exclusively!</p>
+<pre>db.FoodTrolley.find({Inventory: {$gt: 12}, Inventory: {$lt:60}},{_id:0, Inventory:1, FoodItem:1})</pre>
+<p>outputs</p>
+<pre>{ "FoodItem" : "Chocolate Frogs", "Inventory" : 56 }
+{ "FoodItem" : "Pumpkins Pasties", "Inventory" : 14 }</pre>
+<h4>IN Example</h4>
+<p>Find all food items whose name contains either the word "frog" or the word "bean".</p>
+<pre>&gt; db.FoodTrolley.find({FoodItem: {$in: [/Frog/,/Bean/]}}, {FoodItem: 1})
+    <span class="comment">for case sensitive</span>
+<span class="comment">-- or</span>
+&gt; db.FoodTrolley.find({FoodItem: {$in: [/frog/i,/bean/i]}}, {FoodItem: 1})
+    <span class="comment">for case insensitive</span>
+</pre>
+<p>outputs</p>
+<pre>{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }
+{ "_id" : 2, "FoodItem" : "Bertie Bots Every Flavour Beans" }</pre>
+<h3>$Exists and NULL</h3>
+<p>Because of the flexibility that NoSQL databases to have different keys in each document and some documents do not contain some keys, we need a way to filter the results by the very existence of a key, and not just by it's values.</p>
+<p>We can use an <code>$exists</code> modifier to limit results by those that contain the specified key.</p>
+<pre>&gt; db.FoodTrolley.find({"Inventory": {$exists: true}}, {FoodItem: 1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }
+{ "_id" : 3, "FoodItem" : "Pumpkins Pasties" }</span></pre>
+
+<p>and using NULL we can determine if the key does not exist.</p>
+<pre>&gt; db.FoodTrolley.find({"Inventory": null}, {FoodItem: 1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 2, "FoodItem" : "Bertie Bots Every Flavour Beans" }
+{ "_id" : 4, "FoodItem" : "Cauldron Cakes" }
+{ "_id" : 5, "FoodItem" : "Licorice Wands" }</span></pre>
+
+<h3>$IN and $NIN</h3>
+<p>Often our comparator will include a list of values that would be acceptable, or not acceptable.  We can use the $IN modifier to include the values and $NIN to not include others.</p>
+<h4>Example $IN</h4>
+<pre>&gt; db.FoodTrolley.find({"Inventory": {"$in": [10,14,23]}}, {FoodItem: 1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 3, "FoodItem" : "Pumpkins Pasties" }</span></pre>
+<h4>Example $NIN</h4>
+<p>and the opposite</p>
+<pre>&gt; db.FoodTrolley.find({"Inventory": {"$nin": [10,14,23]}}, {FoodItem: 1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs" }
+{ "_id" : 2, "FoodItem" : "Bertie Bots Every Flavour Beans" }
+{ "_id" : 4, "FoodItem" : "Cauldron Cakes" }
+{ "_id" : 5, "FoodItem" : "Licorice Wands" }</span></pre>
+<p>Note: That all records that do not include the inventory key is also included along with those that have the key but not with one of the listed values.</p>
+
+<h3>$AND and $OR</h3>
+<p>Similar to SQL, we also need the ability to filter by multiple criteria at the same time using <code>AND</code> and <code>OR</code> boolean operators.</p>
+
+
+
+
+<h4>AND Example</h4>
+<p>List all food trolly items where the inventory is between 40 and 60, we will need to use an $and boolean operator as well!</p>
+<pre>&gt; db.FoodTrolley.find(
+        {$and: [{Inventory: {$gt: 12}}, {Inventory: {$lt:60}}, {FoodItem: /Frogs/}]},
+        {_id:0, Inventory:1, FoodItem:1})</pre>
+<p>outputs</p>
+<pre><span class="comment">{ "_id" : 1, "FoodItem" : "Chocolate Frogs", "Inventory" : 56 }</span></pre>
+<p>This statement essentially is:<br>
+    show the fooditem name and inventory key/values from FoodTrolley where (inventory &gt; 12 AND inventory &lt; 60 AND fooditem contains the string "FROGS")
+</p>
+
+<h4>OR Example</h4>
+<p>Find all food items that contain either the word "frog" or the word "bean"</p>
+<pre>&gt; db.FoodTrolley.find(
+    {$or: [{FoodItem: /frog/i}, {FoodItem: /bean/i}]},
+    {_id:0, Inventory:1, FoodItem:1})</pre>
+<p>outputs</p>
+<pre>{ "FoodItem" : "Chocolate Frogs", "Inventory" : 56 }
+{ "FoodItem" : "Bertie Bots Every Flavour Beans" }</pre>
+<h3>Order of Operations/Precedence in NoSQL</h3>
+<p>In mathematics and SQL we learned that things happen in a specific order to determine an answer.  Order of operations still apply within calculations in NoSQL, however items such as AND and OR in order of precedence are not impacted.  This means that the {} curly braces will determine the hierarchy of the operators and in which order they execute.  These operate as brackets and are executed from the inside out when nested.</p>
+
+</div>  
+ 
+</body></html>

@@ -1,0 +1,89 @@
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header div {
+    /*width: 990px;*/
+}
+header li { 
+    float: left;
+    padding-top: 0px;
+    
+}
+header ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+header li {
+    float: left;
+  }
+  
+header li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px #ccc solid;
+  }
+  
+header li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+
+header  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color:red;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/*
+     FILE ARCHIVED ON 06:44:31 Jan 16, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:03 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.701
+  exclusion.robots: 0.024
+  exclusion.robots.policy: 0.011
+  esindex: 0.012
+  cdx.remote: 6.138
+  LoadShardBlock: 114.05 (3)
+  PetaboxLoader3.datanode: 98.382 (4)
+  PetaboxLoader3.resolve: 50.867 (2)
+  load_resource: 78.43
+*/

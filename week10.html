@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=466;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week10.html","20240116064748","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387668");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>dbs710 - Week 10 - Introduction to NoSQL and MongoDB</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;" class="hi">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064748/http%3A//dbs211.ca/courses/dbs710/Week10.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week10.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064748"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://dbs211.ca/courses/dbs710/Week10.html" title="See a list of every capture for this URL">2 captures</a><div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 16 Jan 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20130701000000/http://dbs211.ca/courses/dbs710/Week10.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: inline; width: 25px; height: 27px; left: 425px;"></div><div class="mt" style="display: inline; width: 2px; height: 27px; left: 438px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927093752/http://dbs211.ca/courses/dbs710/Week10.html" title="09:37:52 Sep 27, 2023">Sep</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:48 Jan 16, 2024">Jul</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927093752/http://dbs211.ca/courses/dbs710/Week10.html" title="09:37:52 Sep 27, 2023"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:48 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:48 Jan 16, 2024">2013</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064748/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week10.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#" data-url="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#" data-url="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week10.html","20240116064748",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./dbs710 - Week 10 - Introduction to NoSQL and MongoDB_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+<h1>10 - Introduction to NoSQL and MongoDB</h1>
+        <h2>
+            Table of Contents</h2>
+        <ul>
+            <li><a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#Welcome">Welcome</a></li>
+            <li><a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#NoSQL">Introduction to NoSQL</a></li>
+            <li><a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#MongoDB">MongoDB</a></li>
+            <li><a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#Objects">Databases, Collections, Documents</a></li>
+            <li><a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/courses/dbs710/Week10.html#Shell">MongoDB Shell and JavaScript</a></li>
+        </ul>
+        <h2>Suggested Reading Materials</h2>
+        <ul>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064748/https://senecacollege-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_pq_ebook_centralEBC4442363&amp;vid=01SENC&amp;search_scope=default_scope&amp;tab=default_tab&amp;lang=en_US&amp;context=PC">Textbook - MongoDB</a>
+                </li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064748/https://www.w3schools.com/js/js_json_intro.asp">W3Schools JSON Tutorials</a>
+                </li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064748/https://mongodb.com/">MongoDB Website</a></li>
+            <li><a target="_blank" href="https://web.archive.org/web/20240116064748/https://university.mongodb.com/">MongoDB University</a></li>
+                </ul>
+        <hr>
+        <h2 id="Welcome">
+            Chapter 10</h2>
+        <p>
+            Welcome to chapter 10 of DBS710, Advanced Database Systems.&nbsp; This week we dive into the world of NoSQL databases, and specifically MongoDB.  MongoDB is one of the most popular NoSQL databases to rise over the past few years and is a good alternative solution to relational databases in some circumstances.</p>
+            <h3>Installation and Setup</h3>
+            <p>Before getting started this week, the student must install and Setup MongoDB and the associated Compass GUI.  <a href="https://web.archive.org/web/20240116064748/http://dbs211.ca/shared/installMongo.html">Instructions are Here</a> </p>
+        <p>After this week you should be able to:</p>
+        <ul>
+            <li>understand the difference between NoSQL and relational database management systems.</li>
+            <li>know the advantages and disadvantages of using a NoSQL database and potentially identify use case scenarios when one should be used before the other.</li>
+            <li>Understand the concepts of Documents, Collections and Databases within then MongoDB DBMS.</li>
+            <li>Be able to load and run the MongoDB shell area in addition to using Mongo Compass to write basic scripts.</li>
+
+        </ul>
+        <h2 id="NoSQL">Introduction to NoSQL</h2>
+        <p>No SQL is a generic term that refers to any non-relational data management system that does not use SQL as its' standardized communication language.  The basis for traditional relational database management systems are know as ACID:</p>
+        <ul>
+            <li><strong>Atomicity</strong> - all operations in a transaction succeeds or is rolled back</li>
+            <li><strong>Consistency</strong> - after transactions are complete, the database remains consistent</li>
+            <li><strong>Isolation</strong> - transactions are executed without interfering with other transactions</li>
+            <li><strong>Durability</strong> - after transactions are completed, changes will be permanent</li>
+        </ul>
+        <h3>Why NoSQL</h3>
+        <p>There are several reasons why NoSQL is a potential fit for situations including:</p>
+        <ul>
+            <li><strong>Schema-less Data Representation</strong> - The schema does not have to be defined in advance and can change over time.  The Schema is flexible.</li>
+            <li><strong>Development Time</strong> - Simplicity may reduce the development time greatly.  There is no complex SQL queries, such as join.</li>
+            <li><strong>High Availability</strong> - NoSQL architecture supports data replication.  There is no limits on replicas.  If the main server is inaccessible, a replica server can take over automatically.</li>
+            <li><strong>Plan Ahead for Scalability</strong> - It scales out easily with no limit by adding more servers for distributed data.</li>
+        </ul>
+        <p>There are several different NoSQL database management systems that run using slightly different principles:</p>
+        <h4>Document Based DBs</h4>
+        <p>Both <strong>MongoDB</strong> and <strong>CouchDB</strong> are document based database management systems, as we will explain below.  We will be using MongoDB in this course for our NoSQL DBMS.
+        </p>
+        <p>Other types of NoSQL DBMSs include key-value, XML, Column and Graph based systems.</p>
+        <h3>SQL vs NoSQL Databases</h3>
+        <p>Factors that determine the advantages and drawbacks of using a NoSQL solution include:</p>
+        <ul>
+            <li><strong>Entity Schema Requirements: </strong> The density of relationships amongst the entities and the likelihood of the schema to change over time are factors in the decision to choose one over the other.  Relational databases are not easily changed but are able to better handle a great number of relationships.</li>
+            <li><strong>Data Access Requirements: </strong> Data must always be consistent or can eventually be consistent.  NoSQL databases can often introduce inconsistencies that may be troublesome, where relational databases can solve this by utilizing build in concurrency rules.</li>
+            <li><strong>What they can do:</strong> What NoSQL can offer above Relational databases</li>
+            <li><strong>What they can not do:</strong> What NoSQL DBMSs cannot do that relational databases can do.</li>
+        </ul>
+        <p>Let us look at a couple cases in making a decision between NoSQL and relational databases.</p> 
+        <h4>Data Science, Machine Learning and Artificial Intelligence</h4>
+        <p>In data science, it is typical to have a very large amount of data and in order to process it, speed is a definite requirement in addition to data consistency and integrity.  Machine learning requires the most accurate data possible to come to the best conclusions.  Data errors and data inconsistency can add to processing, or learning, time and cause skewed results based on incorrect data.</p>
+        <p>Machine Learning and Artificial Intelligence, especially in unsupervised learning scenarios, relies heavily on the relationships between different entities in the data and can transverse the data though relationships and discover correlations that may or may not have been expected. </p>
+        <p>In this scenario, Relational Databases are the better choice.</p>
+        <h4>Transactional Applications</h4>
+        <p>These applications rely heavily on data consistency and data integrity and have the lower possibility of concurrency or have concurrency managed within the system through built-in processes.  Transactional applications are highly structured with pre-defined business rules, parent-child relations and often the schema will not change over time.</p><p>Data access must be consistent at all times in order to ensure transactional success through one or more statements within the transaction.</p><p>Using NoSQL results in the inability to define relationships, does not support transactions at all, lacks ACID properties, and has no ability to use customized joins for varying the results based on the inquiry.</p>
+        <p>The relational model is preferred for transactional applications.</p>
+        <h4>Web-Scale Applications</h4>
+        <p>These small to mid-sized web applications need to scale easily and can contain a large variety of content that is evolving over time as new products, or new website features are added.  The database must be flexible to change and handle large quantities of operations and users.</p>
+        <p>When the application is evolving over time and the schema needs to be changeable, partial record access is permissable and data consistence is of a lower priority, NoSQL database systems may be an option.</p>
+
+<h2 id="MongoDB">Introduction to MongoDB</h2>
+<p>MongoDB is a Document-Oriented NoSQL database and differs greatly from a relational one.  MongoDB is a powerful, flexible and scalable general-purpose database that will meet the needs of many small and medium sized database requirements.  The following features are available in MongoDB:</p>
+<ul>
+    <li>Indexing</li>
+    <li>Aggregations (Grouping and Summaries)</li>
+    <li>File Storage - easy backup and replication</li>
+    <li>Special Collection Types - for custom requirements</li>
+</ul>
+<h3>Ease of Use</h3>
+<p>In MongoDB, the concept of a row is replaced with a document, which a much more flexible.  By using documents and arrays, complex hierarchical relationships can be represented with a single record.  MongoDB is schema-less, i.e. there is no pre-defined schema, giving ultimate flexibility on the fly.  The types of a document's keys and values can be variable, fields can be added or removed easily, and there are several models that can be chosen from.</p>
+<h3>Ease of Scaling</h3>
+<p>In modern applications, the amount of data grows at a rapid pace and the database needs to scale easily.  NoSQL databases can be easily scaled up by adding more powerful, or clustered servers.  This option is expensive and may have limits of technology and physical space.</p>
+<p>By partitioning data across more machines, databases can be scaled out by adding more storage to the cluster of servers.  This cheaper alternative can be effective but can also be difficult to manage hundreds or thousands of machines.</p>
+<p>MongoDB as a document-orientated model scales out easier by splitting data across multiple servers.</p>
+
+<h2 id="Objects">Databases, Collections and Documents</h2>
+<h3>Basic Concepts</h3>
+<p>A <strong><i>document</i></strong> is the base unit of data and is equivalent to a row of data in a relational database.<br>For example, the book title "Blue Sky" is a document and the book title "Hamlet" is another document.</p>
+<p>A <strong><i>collection</i></strong> is a group of similar rows put together, like a table in a relational database, but has a dynamic and changeable schema.<br>For example, the group of documents described above is a collection of book documents.  The flexibility arrives when one book may have a category of genre and one book may have a category and a sub-category.  The two documents can have slightly different schemas, but can be part of the same collection.</p>
+<p>A <strong><i>database</i></strong> is a group of collections grouped together into a single instance.  One MongoDB can host multiple databases.</p>
+<h3>Documents</h3>
+<p>Every document has a special key (Id) and is unique within the collection and is defined by the key and a value.</p><pre>{"greeting": "Hello World!"}</pre> where the key is "greeting" and the value is "Hello World!". <br>A document can contain multiple key/value pairs:<pre>{"greeting": "Hello World!", "signal": "wave", "count": 2}</pre> Where an additional key of "signal" is paired with the value "wave" and a third key, "count", is paired with the value 2.  Note that the values do not need to be the same type, but can be varied as required.<p></p>
+<p>The key must be of type string, using only UTF-8 characters, and can not be the null terminator '\0'.  Do not include $ in a key name.</p>
+<p>MongoDB is both type and case sensitive.  Example:
+</p><pre>    {"count": 3}
+    {"count": "3"}
+</pre>
+are different distinct documents as are:
+<pre>    {"count": 3}
+    {"Count": 3}
+</pre>
+<p></p>
+<p>A single document must not contain duplicate key names:
+</p><pre>   {"count": 3, "count": 4}</pre>
+would cause an error and gives an illegal document error due to duplicate keys.
+<p></p>
+<h3>Collections</h3>
+<p>A collection is a group of documents and can be considered as a table would be in a relational database but the collection has a dynamic schema where different documents, or rows, can have different schemas, or a different set of columns.
+</p><pre>    {"greeting": "Hello World!"}
+    {"count": 4}
+</pre>A document can be in any collection.<p></p>
+<p>A collection is identified by its' name, but the name may not be empty, contain a null terminator '\0', start with a reserved prefix, such as system, of include the reserved character $.</p>
+<p><strong><i>Sub-collections</i></strong> can be used in the organization of a collection and accessed using dot notation.  Example:  A blog collection may have 2 sub-collections, <code>blog.posts</code> and <code>blog.authors</code>.</p>
+<h3>Databases</h3>
+<p>As you may have assumed by now, a database is a group of collections containing data related to a single application.  A single instance of MongoDB can host multiple databases.  Each database is stored in a separate file and is identified by name.  The same naming rules as collections, apply to database with the addition of almost no special characters are allowed in the name and must be less than 64 bytes.</p>
+<p>There are three reserved database names that can not be used, as they are used for admin level data storage.  These are:</p>
+<ul>
+    <li><strong>admin</strong>: this is the root database and contains information about all the user-defined databases properties.  This database is the top of the hierarchy and users granted admin permissions have all permissions to all databases.  Only admins are authorized to execute some server level commands.</li>
+    <li><strong>local</strong>: this database stores any local connections on a single server</li>
+    <li><strong>config</strong>: this database stores the clusters' metadata.  This database is not used in single machine local installations of MongoDB.</li>
+</ul>
+<h3>Namespaces</h3>
+<p>Namespaces are simply a qualified collection name describing the hierarchy of the data storage.</p><pre>database.collection.subcollection: cms.blog.posts</pre> <p></p>
+<h2 id="Shell">MongoDB Shell and JavaScript</h2>
+<p>The MongoDB Shell is a full-featured JavaScript interpreter.  This means you can use JavaScript programs in the shell to easily manipulate and access the data documents within the database.
+</p><pre>&gt; x = 200
+<span class="comment">200</span>
+&gt; x / 5;
+<span class="comment">40</span>
+</pre>and you can use all the standard JavaScript libraries:
+<pre>&gt; "Hello World!".replace("World", "MongoDB");
+<span class="comment">Hello MongoDB!</span>
+</pre><p></p>
+<p>This capability of doing JavaScript is very extensible with the ability to write JavaScript functions.
+</p><pre>&gt; function factorial(n) {
+... if (n &lt;= 1) return 1;
+... return n * factorial(n-1);
+... }
+&gt; factorial(5);
+<span class="comment">120</span>
+&gt; factorial(10);
+<span class="comment">3628800</span>
+</pre>
+<p></p>
+
+</div>  
+
+
+ 
+</body></html>

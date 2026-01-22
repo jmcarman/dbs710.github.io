@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=812;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week06.html","20240116064746","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387666");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences </title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;" class="hi">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064746/http%3A//dbs211.ca/courses/dbs710/Week06.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week06.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064746"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://dbs211.ca/courses/dbs710/Week06.html" title="See a list of every capture for this URL">2 captures</a><div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 16 Jan 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20080101000000/http://dbs211.ca/courses/dbs710/Week06.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: inline; width: 25px; height: 27px; left: 300px;"></div><div class="mt" style="display: inline; width: 2px; height: 27px; left: 301px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927073851/http://dbs211.ca/courses/dbs710/Week06.html" title="07:38:51 Sep 27, 2023">Sep</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:46 Jan 16, 2024">Jan</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927073851/http://dbs211.ca/courses/dbs710/Week06.html" title="07:38:51 Sep 27, 2023"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:46 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:46 Jan 16, 2024">2008</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064746/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week06.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html#" data-url="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html#" data-url="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064746/http://dbs211.ca/courses/dbs710/Week06.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week06.html","20240116064746",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./DBS710 - 6 - Dynamic SQL - Exception Handling, Cursors, and Sequences_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+        <h1>6 - Dynamic SQL - Exception Handling, Cursors, and Sequences</h1>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li>Exception Handling</li>
+            <li>Cursors</li>
+            <li>Sequences</li>
+        </ul>
+
+        <h2>Exception Handling</h2>
+        <p>To handle exceptions in MS SQL, a <code>TRY...CATCH</code> statement works similarly to the exception handling statements that are available from the .NET languages such as C#. A <code>TRY</code> block can be coded around any statement block that can potential raise an error. A TRY block begins with the <code>BEGIN TRY</code> keywords and ends with the <code>END TRY</code> keywords.</p>
+        <h4>Syntax</h4>
+<pre>BEGIN TRY
+    {sql_statement|statement_block} 
+END TRY 
+BEGIN CATCH 
+    {sql_statement|statement_block}
+END CATCH
+</pre>
+<p>Following the <code>TRY</code> block, you must code a single <code>CATCH</code> block. A <code>CATCH</code> block begins with the <code>BEGIN CATCH</code> keywords and ends with the <code>END CATCH</code> keywords. Within the <code>CATCH</code> block, you can include any statements that handle the error that might be raised in the <code>TRY</code> block.</p>
+<h4>Example 1</h4>
+<pre><span class="highlight">BEGIN TRY</span>
+    INSERT INTO employees
+        VALUES ('Clint', 'MacDonald', 'clint.macdonald@email.com', '905-555-1212', 
+                CONVERT(datetime, '05-29-21', 1), 'IT Manager', 8000, <span class="highlight">5</span>); 
+        <span class="comment">-- note that departmentID 5 does not exists and will raise a referential integrity error</span>
+    PRINT 'SUCCESS: Record was inserted.';
+<span class="highlight">END TRY</span>
+<span class="highlight">BEGIN CATCH</span>
+    PRINT 'FAILURE: Record was not inserted.'; 
+    PRINT 'Error ' + CONVERT(varchar, ERROR_NUMBER(), 1) + ': ' + ERROR_MESSAGE();
+<span class="highlight">END CATCH;</span>
+<span class="comment">The message that’s displayed FAILURE: Record was not inserted.
+    Error 547: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Employees_Departments". 
+    The conflict occurred in database "dbs710Sample", table "dbo.employees", column 'departmentID'.
+</span></pre>
+<p>The first statement in the CATCH block uses a <code>PRINT</code> statement to display a message that indicates that the INSERT statement in the TRY block failed. The second PRINT statement uses two system functions that are designed to work within a CATCH block to provide more detailed information about the error.</p> 
+<p>It’s common to use a CATCH block to display information to the user.  You can also use a CATCH block to complete other exception handling tasks such as logging information about the error to a log table or completing a rollback within a transaction.</p> 
+
+<p>In example 1 above, the INSERT statement provides a department ID that does not exist in the departments table, and therefore referential integrity will throw an error. Then, the script execution will skip the PRINT statement that follows the INSERT statement and resume in the CATCH block. This causes the message that’s shown in this block to be displayed. However, if the INSERT statement had executed successfully, the TRY block would have continued by executing the PRINT statement immediately following the INSERT statement and skipping the CATCH block.</p>
+<p>When coding TRY...CATCH statements, you may find that some types of
+errors aren’t handled. In particular, errors with a low severity are considered warnings and aren’t handled. Conversely, errors with a high severity often cause the database connection to be closed, which prevents them from being handled. Another thing to keep in mind when coding TRY...CATCH statements is
+that they must be coded within a single batch, stored procedure, or trigger. However, you can nest one TRY...CATCH statement within another. For example, if a CATCH block contains complex code that inserts error data into a log table, you may want to code a TRY...CATCH statement within that CATCH block to catch any errors that might occur there as well.</p>
+<h3>System Functions - Exception Related</h3>
+<table>
+    <tbody><tr>
+        <td><code>@@ROWCOUNT</code></td>
+        <td>Returns the number of rows affected by the most recent SQL statement.</td>
+    </tr>
+    <tr>
+        <td><code>@@ERROR</code></td>
+        <td>Returns the error number generated by the execution of the most recent SQL statement. Returns 0 if no error occurred.</td>
+    </tr>
+    <tr>
+        <td colspan="2">Catch Block Only System Functions</td>
+    </tr>
+    <tr>
+        <td><code>ERROR_NUMBER()</code></td>
+        <td>Returns the error number.</td>
+    </tr>
+    <tr>
+        <td><code>ERROR_MESSAGE()</code></td>
+        <td>Returns the error message.</td>
+    </tr>
+    <tr>
+        <td><code>ERROR_SEVERITY()</code></td>
+        <td>Returns the severity of the error.</td>
+    </tr>
+    <tr>
+        <td><code>ERROR_STATE()</code></td>
+        <td>Returns the state of the error.</td>
+    </tr>
+</tbody></table>
+<h2>Sequences</h2>
+<p>A sequence is a database object that automatically generates a sequence of integer values. As we have learned before, we can use the IDENTITY attribute for the primary key of a table to generate a simple sequence of numbers that starts with 1 and is incremented by 1.  This is a built in simplistic for of a sequence.  You wil a sequence object if you want to generate a more complex sequence of numbers or if you want to share the sequence between multiple tables.</p>
+<blockquote>An Identity Sequence is a simple sequence that starts at 1 and increments by 1 each time it is referenced.  This is typically referred to as an auto-number field and would be quotes as follows:
+<pre>CREATE TABLE someTable (
+    pk INT IDENTITY(1,1) PRIMARY KEY,
+    field2 &lt;field type and size&gt;,
+    field3 &lt;field type and size&gt;
+)</pre>
+</blockquote>
+    <h3>How to create a custom sequence object</h3>
+<p>A sequence is created by coding the <code>CREATE SEQUENCE</code> statement followed by the name of the sequence and the starting value. The default increment is 1 unless specified otherwise using the  INCREMENT BY clause to increment the sequence numbers by a value other than 1. You can code a negative value to create a descending sequence if that is required.</p>
+<h4>Sequence clauses</h4>
+<table>
+    <thead>
+        <tr><td>Clause</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>STARTS&nbsp;WITH</code></td>
+            <td>When the sequence is used for the first time, the first value that will be generated</td>
+        </tr>
+        <tr>
+            <td><code>INCREMENT&nbsp;BY</code></td>
+            <td>As each new value is generated by the sequence, the difference between the previous and new values is the increment</td>
+        </tr>
+        <tr>
+            <td><code>MIN&nbsp;VALUE</code></td>
+            <td>The minimum value that will be generated by a sequence.  This value typically onlyy applies with decreasing sequences and/or sequences that cycle/wrap and start at the beginning again</td>
+        </tr>
+        <tr>
+            <td><code>MAX&nbsp;VALUE</code></td>
+            <td>The maximum value that will be generated by a sequence.  Once the maximum value is reached no further values will be generated unless the CYCLE option is used.</td>
+        </tr>
+        <tr>
+            <td><code>CYCLE</code></td>
+            <td>This is a boolean option that determines if the value generation starts over again at the minimum value once it exceeds the maximum value.  Be careful using this option with fields being used as a primary key or unique indexes as it would be easy to try and generate duplicate values.</td>
+        </tr>
+        <tr>
+            <td><code>CACHE</code></td>
+            <td>The cache allows generated numbers to be stored in the cache for a short time.  The value associated with the cache simply indicates how many values are stored at any one time.  If the size is surpassed, than the oldest one drops off to make room for a new value.</td>
+        </tr>
+    </tbody>
+</table>
+
+    
+    <h4>Syntax</h4>
+<pre>CREATE SEQUENCE sequence_name [AS integer_type]
+    [START WITH starting_integer] 
+    [INCREMENT BY increment_integer] 
+    [{MINVALUE minimum_integer | NO MINVALUE}] 
+    [{MAXVALUE maximum_integer | NO MAXVALUE}] 
+    [{CYCLE|NOCYCLE}]
+    [{CACHE cache_size|NOCACHE}]
+</pre>
+<h4>Examples</h4>
+<p>A statement that creates a sequence that starts with 1</p> 
+<pre>CREATE SEQUENCE TestSequence1 
+    START WITH 1;</pre>
+<p>A statement that specifies a starting value and an increment for a sequence</p> 
+<pre>CREATE SEQUENCE TestSequence2 
+    START WITH 1001 
+    INCREMENT BY 13;</pre>
+<p>A statement that specifies all optional parameters for a sequence</p> 
+<pre>CREATE SEQUENCE TestSequence3 AS int
+    START WITH 100 
+    INCREMENT BY 3 
+    MINVALUE 100 
+    MAXVALUE 1000000 
+    CYCLE CACHE 10;
+</pre>
+
+<h3>How to use a sequence</h3> 
+<p>In order to use a sequence to obtain a value, the key words <code>NEXT VALUE FOR</code> are used.  These are mostly going to be used during an INSERT statement, but can be used for many other reasons as well.</p>
+<p>Statements that get the next value for a sequence</p> 
+<pre>INSERT INTO SequenceTable
+    VALUES (NEXT VALUE FOR &lt;sequenceName&gt;, 'First inserted row') 
+INSERT INTO SequenceTable
+    VALUES (NEXT VALUE FOR &lt;sequenceName&gt;, 'Second inserted row');
+</pre>
+<p>A statement that gets the current value of the sequence</p> 
+<pre>SELECT current_value FROM sys.sequences WHERE name = '&lt;sequenceName&gt;';</pre>
+
+<h4>Using Sequences with Transactional SQL</h4>
+<p>The developer must be made aware that when implicit transactions are used, that sequence values may be "reserved" for those pending commits.  If a pending transaction is rolled back, the sequence cannot also rollback as there may be other concurrent transactions occurring that have already used.  This does result in values in the middle of a sequence being apparently skipped.  In more advanced SQL not covered here, the cache can be used to go back and use skipped values, and not interfere with the sequences of concurrent transactions. </p>
+<h2>Cursors</h2>
+<p>As we have learned previously, SQL statements work with an entire result set rather than individual rows. We can create calculated values which are process one row at a time (the Order of Execution), but we can not perform different actions on different rows from a single result set.  You may sometimes need to work with the data in a result set one row at a time. To do that, we will use a cursor.</p>
+<p>A cursor is similar to an array in compiled programming languages, but with the subtle difference that there are no indexes and the datatype can be a row of data.  The cursor allows us to use a <code>WHILE</code> loop to iterate through rows individually to perform row specific tasks.</p>
+<blockquote>A cursor is defined using an SQL statement and contains the result set of that SQL statement.</blockquote>
+<p class="BestPractice">Before you use a cursor to work with individual rows in a result set, you should consider other solutions as standard database access is much faster and uses fewer server resources than cursor-based access.</p>
+<h4>Syntax</h4>
+<p>Declare a cursor</p>
+<pre>DECLARE cursor_name CURSOR FOR select_statement;</pre>
+<p>Open the cursor</p> <pre>OPEN cursor_name;</pre>
+<p>Get column values from the row and store them in a series of variables</p> 
+<pre>FETCH NEXT FROM cursor_name INTO @variable1[, @variable2][, @variable3]...;</pre>
+<p>Close and deallocate the cursor </p>
+<pre>CLOSE cursor_name;
+DEALLOCATE cursor_name;
+</pre>
+<h3>@@FETCH_STATUS</h3>
+<p>The <code>@@FETCH_STATUS</code> system function returns 0 if the row was fetched successfully or -1 if the row can’t be fetched because the end of the result set has been reached.</p>
+<h3>FETCH NEXT</h3>
+<p>While iterating through the rows a result set, the <code>FETCH NEXT FROM</code> statement is used retrieve the next row and potentially store values in previously declared parameters.</p>
+<h4>Example 1</h4>
+<pre>DECLARE
+    @departmentID INT = 50,
+    @employeeID INT,
+    @fullName nvarchar(50),
+    @salary decimal(8,2),
+    @commPct decimal(8,2),
+    @pay decimal(8,2),
+    @upCount INT = 0;
+DECLARE curEmps <span class="highlight">CURSOR FOR</span>
+    SELECT 
+        employeeID, 
+        firstName + ' ' + lastName, 
+        monthlySalary, 
+        commissionPercent
+    FROM employees
+    WHERE departmentID = @departmentID;
+
+<span class="highlight">OPEN curEmps;</span>
+<span class="highlight">FETCH NEXT FROM curEmps INTO @employeeID, @fullName, @salary, @commPct;</span>
+
+WHILE <span class="highlight">@@FETCH_STATUS</span> &lt;&gt; -1
+    BEGIN
+        SET @pay = @salary + @salary * IsNull(@commPct,0);
+        IF @pay &gt; 7000
+            BEGIN
+                UPDATE employees SET monthlySalary = @salary * 1.01
+                WHERE employeeID = @employeeID;
+                
+                SET @upCount = @upCount + 1;
+            END;
+            <span class="highlight">FETCH NEXT FROM curEmps INTO @employeeID, @fullName, @salary, @commPct;</span>
+    END;
+
+<span class="highlight">CLOSE curEmps;
+DEALLOCATE curEmps;</span>
+PRINT '';
+PRINT CONVERT(varchar, @UpCount) + ' row(s) updated.';</pre>
+
+
+
+    </div>
+ 
+</body><!--
+     FILE ARCHIVED ON 06:47:46 Jan 16, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:01:48 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 0.461
+  exclusion.robots: 0.032
+  exclusion.robots.policy: 0.023
+  esindex: 0.008
+  cdx.remote: 83.706
+  LoadShardBlock: 76.39 (3)
+  PetaboxLoader3.datanode: 100.507 (4)
+  load_resource: 627.243
+  PetaboxLoader3.resolve: 577.339
+  nav: 0.164 (6)
+--></html>

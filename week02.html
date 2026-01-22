@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="resources/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app213.us.archive.org';v.server_ms=264;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="resources/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="resources/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="resources/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/courses/dbs710/Week02.html","20240116064740","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1705387660");
+</script>
+<link rel="stylesheet" type="text/css" href="resources/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="resources/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    
+    <title>DBS710 - Week 2 - Multi-Line (Aggregate) Functions </title>
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="resources/include.js"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20240116064740/http%3A//dbs211.ca/courses/dbs710/Week02.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://dbs211.ca/courses/dbs710/Week02.html" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20240116064740"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/http://dbs211.ca/courses/dbs710/Week02.html" title="See a list of every capture for this URL">2 captures</a><div class="r" title="Timespan for captures of this URL">27 Sep 2023 - 16 Jan 2024</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px;"></div><div class="mt" style="display: none; width: 2px; height: 27px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927085356/http://dbs211.ca/courses/dbs710/Week02.html" title="08:53:56 Sep 27, 2023">Sep</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 06:47:40 Jan 16, 2024">JAN</td>
+            <td class="f" nowrap="nowrap">Feb</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20230927085356/http://dbs211.ca/courses/dbs710/Week02.html" title="08:53:56 Sep 27, 2023"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 06:47:40 Jan 16, 2024">16</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2023</td>
+            <td class="c" id="displayYearEl" title="You are here: 06:47:40 Jan 16, 2024">2024</td>
+            <td class="f" nowrap="nowrap">2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#" title="Share via My Web Archive" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20240116064740/http://web.archive.org/screenshot/http://dbs211.ca/courses/dbs710/Week02.html" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#" data-url="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#" data-url="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/LAC_2024)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/LAC_2024" target="_new"><span class="wm-title">LAC Domain Harvest 2024</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Domain harvest of the .ca web domain performed by Internet Archive on behalf of the Library and Archives Canada in January-March, 2024.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://dbs211.ca/courses/dbs710/Week02.html","20240116064740",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div><script type="text/javascript" src="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/wombat.js" charset="utf-8"></script>
+<script>var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+let window = _____WB$wombat$assign$function_____("window");
+let globalThis = _____WB$wombat$assign$function_____("globalThis");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+{
+window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};
+
+}}</script>
+<script type="text/javascript" src="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://dbs211.ca/inc/header_dbs710.html","20240904155912","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1725465552");
+</script>
+<link rel="stylesheet" type="text/css" href="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./DBS710 - Week 2 - Multi-Line (Aggregate) Functions_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<header>
+    <div>
+    <ul>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/">Home</a></li>
+        <li><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710 Home</a></li>
+        <li class="dropdown">
+            <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/" class="dropbtn">Weeks</a>
+            <div class="dropdown-content">
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/preface.html">Getting Started - Installations</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week01.html">1 - Introduction and Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week02.html">2 - Extended Review and Single-Line Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week03.html">3 - Aggregate Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week04.html">4 - Sub-Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week05.html">5 - Set Operators and Transactions Review</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week06.html">6 - Review and Midterm</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week07.html">7 - Introduction to PL/SQL</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week08.html">8 - PL/SQL Procedures and Functions</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week09.html">9 - PL/SQL Cursors</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week10.html">10 - Intro to MongoDB</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week11.html">11 - Basic NoSQL CRUD Statements</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week12.html">12 - NoSQL Queries</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week13.html">13 - NoSQL Aggregation</a>
+                <a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/Week14.html">14 - Review and Final Test</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</header>
+<div class="container-lg px-3 my-5 markdown-body">
+    <h1><a href="https://web.archive.org/web/20240904155912/http://dbs211.ca/courses/dbs710/">DBS710</a></h1>
+    </div>
+<!--
+     FILE ARCHIVED ON 15:59:12 Sep 04, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:59:10 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.451
+  exclusion.robots: 0.017
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 9.355
+  LoadShardBlock: 137.078 (3)
+  PetaboxLoader3.datanode: 83.903 (4)
+  PetaboxLoader3.resolve: 103.372 (2)
+  load_resource: 148.725
+--></div>
+    <script>includeHTML();</script>
+    <div class="container-lg px-3 my-5 markdown-body">
+
+<h1>2 - Multi-line (Aggregate) Functions</h1>
+<h2>Table of Contents</h2>
+<ul>
+    <li><a href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#aggregatefunctions">Aggregate Functions</a></li>
+    <li><a href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#grouping">Grouping</a></li>
+    <li><a href="https://web.archive.org/web/20240116064740/http://dbs211.ca/courses/dbs710/Week02.html#having">Having</a></li>
+</ul>
+<h2 id="aggregatefunctions">Aggregate Functions</h2>
+<p>When we think about the business world and what questions are being asked in the workplace, it is absolutely impossible to not include questions that include "How much ... ", "How many ... ", "What is the highest ... ", "What is the lowest ... ".  With questions like "How much money did we make today?", "How many employees work for us?"," etc.... it is easy to see that some answers to questions will require the aggregation of data across multiple rows of data.  To this point in your SQL learning, all <code>SELECT</code> statements have been executed on single rows of data, one at a time.  Now we move into the world of multiple-row functions.</p>
+
+<h3>SELECT Statement Syntax</h3>
+<p>So far we have learned 4 clauses in the SELECT statement:</p>
+<ul>
+    <li>SELECT</li>
+    <li>FROM</li>
+    <li>WHERE</li>
+    <li>ORDER BY</li>
+</ul>
+<p>Now by adding aggregate functions, we introduce 2 new clauses, GROUP BY and HAVING.</p>
+<pre>SELECT      &lt; comma separated field list &gt;
+FROM        &lt; table(s) with/without JOINS &gt;
+WHERE       &lt; conditions not involving aggregate functions &gt;
+GROUP BY    &lt; comma separate field list (group by expression) &gt;
+HAVING      &lt; conditions involving aggregate functions &gt;
+ORDER BY    &lt; comma separated columns &gt;</pre>
+
+
+<h3>The 7 Aggregate Functions</h3>
+<p>There are exactly 7 different aggregate functions in SQL, and these 7 will enable the programmer to answer almost any business question.  The 7 aggregate functions are:</p>
+<table>
+    <caption>7 Aggregate Functions</caption>
+    <thead>
+        <tr>
+            <td>Function</td>
+            <td>Description</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>SUM()</strong></td>
+            <td>the summation (addition) of data </td>
+            <td>the total owing on a receipt adding up multiple purchased products</td>
+        </tr>
+        <tr>
+            <td><strong>COUNT()</strong></td>
+            <td>counting the number of instances (rows)</td>
+            <td>The number of employees that work at a specific location</td>
+        </tr>
+        <tr>
+            <td><strong>AVG()</strong></td>
+            <td>Average - the non-weighted average of a group of given numbers</td>
+            <td>The average price of products being sold on a website.</td>
+        </tr>
+        <tr>
+            <td><strong>MIN()</strong></td>
+            <td>Minimum - the smallest number, the first alphabetical string, and the earliest date chronologically.</td>
+            <td>The earliest date (first event) in a list of events</td>
+        </tr>
+        <tr>
+            <td><strong>MAX()</strong></td>
+            <td>Maximum - the largest number, last alphabetical string, or latest date</td>
+            <td>The largest number in a set of numbers</td>
+        </tr>
+        <tr>
+            <td><strong>STDDEV()</strong></td>
+            <td>Standard Deviation - A statistical measure of the horizontal distribution of data points.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>VARIANCE()</strong></td>
+            <td>Standard Deviation - A statistical measure of the vertical distribution of data points.</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p>Some examples of the main functions might be:</p>
+<div class="GeneralSQL"></div>
+<pre>    SELECT count(playerID) AS numPlayers FROM players;
+</pre>
+<p>will return the number of rows in the player table.  This should product a unique list as <i>playerid</i> would be the primary key, so in this case <code>DISTINCT</code> would not be required, but it might be in other cases.</p>
+<div class="GeneralSQL"></div>
+<pre>    SELECT sum(balanceOwing) AS totalOwing FROM customers;
+</pre>
+<p>would return the total owing from ALL customers.  This would be an important number for companies to know how much money they should have coming in within the next short time period: assuming customers all pay their bills that is :)</p>
+
+<div class="GeneralSQL"></div>
+<pre>    SELECT min(eventDate) AS firstEventDate FROM events;
+</pre>
+<p>would return the date of the first event in a table of events, if multiple events had the same date, it would still only return the date once.</p>
+<h2 id="grouping">Grouping (GROUP BY)</h2>
+<p>It is often required to have more complex answers that involve grouping data rows together.  For example: How many players in a players table, does not requiring any grouping, but a slightly different question: How many players play on each team in a league would require you to group players together that play on the same team and then count them.  This is achieved through the GROUP BY statement.</p>
+<h4>How many players play on each team?</h4>
+<div class="GeneralSQL"></div>
+<pre>    SELECT teamName, firstName, lastName
+    FROM players JOIN teams USING (teamID)
+    ORDER BY teamName;
+</pre>
+<p>gives us the players on each team, but we can only count them manually because we sorted it by teamName.  It is still a manual count.  Therefore, if we want the SQL to produce the actual numbers automatically, we need to group the players together by team and then use the <code>count()</code> aggregate function</p>
+<div class="GeneralSQL"></div>
+<pre>    SELECT 
+        teamName, 
+        count(playerID) AS numPlayers
+    FROM players JOIN teams USING (teamID)
+    GROUP BY teamName
+    ORDER BY teamName;
+</pre>
+<p>gives us the results that we need.  However, what if there is a possibility that the teamName is not unique and we therefore need to ensure we are not mixing players from multiple teams.</p>
+<div class="GeneralSQL"></div>
+<pre>    <span class="comment">-- THIS CAUSES AN ERROR</span>
+    SELECT 
+        teamID,
+        teamName, 
+        count(playerID) AS numPlayers
+    FROM players JOIN teams USING (teamID)
+    GROUP BY teamName
+    ORDER BY teamName;
+</pre>
+<p>will give us an error as the teamID is not part of an aggregate function nor is it in the <code>GROUP BY</code> clause. <br><i>Note: That if we had used <code>ON</code> rather than <code>USING</code> then we would also have an ambiguous field error.</i></p>
+<p class="BestPractice">Clint's Law: Any field in the <code>SELECT</code> clause that is not part of an aggregate function, or a sub-query, MUST be in the <code>GROUP BY</code> clause.<br><br><i>yes I called it my law, I made it up, but it works.  Realistically it is just a different way of saying what other books have said, but I feel it simplifies it and makes it an easy to follow rule.</i></p>
+<p>So because of the above rule, the teamID in the above statement is a field that is not part of the aggregate function, and therefore must be in the <code>GROUP BY</code>.  Let us correct this along with the ambiguous issue we had above if we had used ON.</p>
+<div class="GeneralSQL"></div>
+<pre>    SELECT 
+        t.teamID, <span class="comment">-- because an inner join is used, it does not matter if this is t.teamID or p.teamID</span>
+        teamName, <span class="comment">-- outer joins are different and careful consideration is required.</span>
+        count(playerID) AS numPlayers
+    FROM players p JOIN teams t ON p.teamID = t.teamID
+    GROUP BY t.teamID, teamName
+    ORDER BY teamName;
+</pre>
+<blockquote>Caution when grouping by a <code>PRIMARY KEY</code>, as grouping on a primary key can often result in nothing more than groups of one.  In this case the <code>INNER JOIN</code> will result in repeated values for the teamID in the out put so it would be okay.</blockquote>
+<h3>Examples</h3>
+<h4>Example 1</h4>
+<p>Using the class sample database, How much money goes out for salaries per month per department</p>
+<div class="MSSQL"></div>
+<pre>SELECT
+    departmentID,
+    sum(monthlySalary) AS totalSalary
+FROM employees
+GROUP BY departmentID
+ORDER BY departmentID;
+<span class="comment">-- but this does not include commission yet</span>
+SELECT
+    department_id,
+    sum(monthlySalary) AS totalSalary,
+    sum(monthlySalary * IsNull(commissionPercent,0)) AS totalCommission
+FROM employees
+GROUP BY departmentID
+ORDER BY departmentID;
+<span class="comment">--</span> 
+SELECT
+    department_id,
+    sum(monthlySalary) AS totalSalary,
+    sum(monthlySalary * IsNull(commissionPercent,0)) AS totalCommission,
+    sum(monthlySalary) + sum(monthlySalary * IsNull(commissionPercent, 0)) AS totalIncome,
+    sum(monthlySalary + monthlySalary * IsNull(commissionPercent, 0)) AS totalIncome2,
+    count(departmentID) AS numEmployee
+FROM employees
+GROUP BY departmentID
+ORDER BY departmentID;
+</pre>  
+<h4>Example 2</h4>
+<p>Using the class sample database, What is the average sales commission per month? </p>
+<pre>SELECT Avg(commissionPercent) AS AvgComm
+FROM employees;</pre>
+<p>results in 0.2125 (does this make sense)<br>
+<i>let us do this manually</i></p>
+<pre>-- 0.2 + 0.3 + 0.2 + 0.15 = 0.85
+-- 0.85 / 4 = 0.2125</pre>
+<p>But now we can question this answer, as the average is calculated based on the 4 employees whom receive a commission, but there are 20 employees?  So the <code>avg()</code> aggregate function simply ignores the <i>NULL</i> values present and only counts records with numeric values.  But, does the average commission involve only those employees whom receive commission or is it the average commission for all employees; which would be:</p>
+<pre>-- 0.2 + 0.3 + 0.2 + 0.15 = 0.85
+    -- 0.85 / 20 = 0.0425</pre>
+<p>In order to allow the <code>avg()</code> function to calculate the latter method, we would have to ensure that <i>NULL</i> values are included in the average calculation, and therefore need to convert the null values to a 0 in this case.  We can use the <code>IsNull()</code> function to perform this task.</p>
+<pre>SELECT Avg(<span class="highlight">IsNull</span>(commissionPercent,0)) AS AvgComm
+FROM employees; 
+</pre>
+
+<h2 id="having">HAVING</h2>
+<p>The HAVING clause of the SQL statement can also be added once grouping has taken place.  The HAVING clause is used, very similar to the WHERE clause, but for conditions that involve aggregate functions.  There are quite often conditions that apply to summation data that can only be implemented after grouping takes place, therefore the <code>HAVING</code> clause is executed after the <code>GROUP BY</code> clause, where the <code>WHERE</code> clause executed before the <code>GROUP BY</code> clause.</p>
+<ul>
+    <li>ALWAYS use <code>WHERE</code> for filter conditions that do not involve aggregate functions</li>
+    <li>ALWAYS use <code>HAVING</code> for filter conditions the DO involve aggregate functions</li>
+</ul>
+<h3>Examples</h3>
+<h4>Example 1</h4>
+<p>Display the average salary for employees in each job-title in each department</p>
+<pre>SELECT 
+    jobID,
+    departmentID,
+    avg(IsNull(monthlySalary,0)) AS avgSalary
+FROM employees
+GROUP BY 
+    jobID, 
+    departmentID
+ORDER BY 
+    departmentID, 
+    jobID;</pre>
+<p>Now, only include departments 20, 60, 80, and 90</p>
+    <pre>SELECT 
+    jobID,
+    departmentID,
+    avg(IsNull(monthlySalary,0)) AS avgSalary
+FROM employees
+WHERE departmentID IN (20, 60, 80, 90)
+GROUP BY 
+    jobID, 
+    departmentID
+ORDER BY 
+    departmentID, 
+    jobID;
+    </pre>
+<p>Now, include only those where the average is above 15,000</p>
+    <pre>SELECT 
+    jobID,
+    departmentID,
+    avg(IsNull(monthlySalary,0)) AS avgSalary
+FROM employees
+WHERE department_id IN (20, 60, 80, 90)
+GROUP BY 
+    jobID, 
+    departmentID
+HAVING avg(IsNull(monthlySalary,0)) &gt; 15000
+ORDER BY 
+    departmentID, 
+    jobID;</pre>
+</div>  
+
+
+
+</body><!--
+     FILE ARCHIVED ON 06:47:40 Jan 16, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:01:44 Jan 22, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 0.483
+  exclusion.robots: 0.034
+  exclusion.robots.policy: 0.025
+  esindex: 0.009
+  cdx.remote: 6.515
+  LoadShardBlock: 58.709 (3)
+  PetaboxLoader3.datanode: 113.387 (4)
+  load_resource: 176.991
+  PetaboxLoader3.resolve: 92.4
+  nav: 0.133 (6)
+--></html>
